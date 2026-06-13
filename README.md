@@ -116,7 +116,7 @@
 pip install openai pillow matplotlib numpy scikit-learn pandas tqdm torch
 
 export DASHSCOPE_API_KEY="your-key"
-export VLM_MODEL="qwen3.6-plus"
+export VLM_MODEL="your-VLM model"
 ```
 
 API 端点：`https://dashscope.aliyuncs.com/compatible-mode/v1`（DashScope OpenAI 兼容模式）。
