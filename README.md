@@ -8,14 +8,13 @@
 .
 ├── ablation/          # 消融实验（不同 VLM / TAC 配置对比）
 ├── preprocessing/     # 数据预处理（帧融合、肾区裁剪、特征提取）
-├── segmentation/      # UNet 分割模型
+├── segmentation/      # UNet+LTAE 分割模型
 ├── evaluation/        # 评估工具（Bootstrap CI + McNemar）
 ├── diagnosis/         # 诊断对比分析
 ├── tests/             # 公平对比实验 pipeline
 ├── utils/             # 辅助脚本
 ├── published/         # 金标准 + 预测结果（可公开）
 ├── results/           # 评估结果 CSV / 图表
-├── paper/             # 论文草稿 / 专利
 └── docs/              # 方法论文档
 ```
 
