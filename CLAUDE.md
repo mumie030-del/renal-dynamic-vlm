@@ -4,85 +4,123 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Research project for **renal dynamic scintigraphy diagnosis** using vision-language models (VLMs). The goal is to classify kidneys from 99mTc-EC dynamic image sequences into four categories: 正常肾脏 (normal), 功能性梗阻 (functional obstruction), 机械性梗阻 (mechanical obstruction), 混合性梗阻 (mixed obstruction).
+Research project for **renal dynamic scintigraphy diagnosis** using vision-language models (VLMs). Classifies kidneys from 99mTc-EC dynamic image sequences into four categories: 正常肾脏 (normal), 功能性梗阻 (functional obstruction), 机械性梗阻 (mechanical obstruction), 混合性梗阻 (mixed obstruction).
 
 ## Environment
 
-- No virtual environment, package manager, or dependency file. Install dependencies ad-hoc with `pip install openai pillow matplotlib numpy scikit-learn pandas tqdm`.
-- API calls use the `openai` Python SDK pointed at Alibaba DashScope's compatible-mode endpoint (`https://dashscope.aliyuncs.com/compatible-mode/v1`).
-- **API key**: Set via `DASHSCOPE_API_KEY` environment variable, or passed as `sys.argv[1]` in some scripts. Several older scripts have hardcoded keys — never commit those.
-- Primary model: `qwen3.6-plus` (set via `VLM_MODEL` env var in some scripts).
+- No virtual environment, package manager, or dependency file. Install dependencies with `pip install openai pillow matplotlib numpy scikit-learn pandas tqdm torch`.
+- API: `openai` Python SDK → `https://dashscope.aliyuncs.com/compatible-mode/v1` (DashScope OpenAI compatible mode).
+- **API key**: `DASHSCOPE_API_KEY` env var, or `sys.argv[1]` in some ablation scripts.
+- Primary model: `qwen3.6-plus` (via `VLM_MODEL` env var).
 
-## Pipeline evolution (newest → oldest)
+## Repository structure
 
-The repo contains multiple iterations of the diagnostic pipeline. The main active ones:
-
-1. **`renal_dynamic_report_pipeline.py`** / **`renal_dynamic_report_pipeline (1).py`** — Structured two-stage pipeline (Stage 1: image-based assessment with uncertainty → Stage 2: LLM review/synthesis). Works on `datasets_12/` (60 cases). Outputs structured JSON reports.
-
-2. **`ai_ai.py`** / **`ai_ai_1.py`** — Variants of the two-stage pipeline with Stage 2 acting as a reviewer/critic (LLM reviews Stage 1 outputs). Similar to the report pipeline but with different prompt engineering.
-
-3. **`stable_fusion_pipeline_v2.py`** — Three-view fusion: VLM primary read + TAC-based phenotype classifier + clinical feature summary, followed by a joint synthesis step. Temperature set to 0.0 across all stages for deterministic output.
-
-4. **`renal_multimodal_joint_reasoning_v1.py`** — Three-branch multimodal approach: independent image evidence branch + TAC evidence branch + joint reasoning synthesis. Each branch runs at temperature 0.0.
-
-5. **`clean_kidney_pipeline.py`** — Uncertainty-driven framework: Stage 1 (VLM image read with self-assessment), Stage 2 (rule-based uncertainty quantification), Stage 3 (conditional TAC arbitration only when uncertainty is high).
-
-6. **`api.py`** / **`api_std.py`** — Simpler single-pass VLM pipelines (direct image → diagnosis prompt with no multi-stage reasoning).
-
-7. **`fixed.py`** — Similar to the stable fusion pipeline, a fixed/revised version.
-
-## Dataset structure
-
-Two main dataset directories:
-
-- **`dataset/`** — Original 60 cases: `功能_1` through `功能_20`, `机械_1` through `机械_20`, `混合_1` through `混合_20`.
-- **`datasets_12/`** — Expanded 60-case set with a different numbering scheme (used by the newer pipelines).
-
-Each case directory contains:
-- `images/` — Raw 130-frame sequence images
-- `images_fused_26/` — 26 fused images (130 raw frames merged into 26 time steps per standard protocol)
-- `images_fused_5/` — 5 fused images (coarser temporal aggregation)
-- `labels/` — JSON ROI annotations (left/right kidney bounding regions)
-- `kidney_crop/` — Cropped kidney regions from preprocessing
-- `process_params.json` — Per-case processing parameters
-
-## Running a pipeline
-
-Most pipeline scripts are self-contained and run end-to-end on all cases:
-
-```bash
-# Set API key first
-export DASHSCOPE_API_KEY="your-key"
-
-# Run the main structured pipeline (newest)
-python renal_dynamic_report_pipeline.py
-
-# Some scripts accept a case glob as second arg
-python renal_dynamic_report_pipeline.py "$API_KEY" "机械_*"
-
-# Run older single-pass pipeline on a single case
-python api.py
+```
+ablation/        — VLM diagnostic ablation experiments (various models, TAC configs)
+preprocessing/   — Image preprocessing: frame fusion, kidney cropping, feature extraction
+segmentation/    — UNet+LTAE kidney ROI segmentation (model, train, test)
+evaluation/      — Evaluation: Bootstrap CI, McNemar test, batch comparison
+diagnosis/       — Diagnostic comparison tools
+tests/fair_compare/ — Full fair-comparison pipeline (UNet ROI vs doctor ROI)
+utils/           — Utility scripts (dataset checker, image re-generation)
+published/       — Public: gold standard CSVs + model prediction JSONs (26 experiments)
+results/         — Evaluation result CSVs and comparison charts
+paper/           — Manuscript drafts and patent documents
+docs/            — Methodology docs, doctor guidelines
+data/            — Raw medical images (local only, not in git)
 ```
 
-Each pipeline writes results into a `results_*` subdirectory under its configured `DATASET_DIR`.
+## Dataset
+
+Raw medical images (~50K files, 300 MB) are in `data/` (gitignored). Public evaluation data is in `published/`:
+
+| Dataset | Cases | Kidneys | Naming | Gold CSV |
+|---------|-------|---------|--------|----------|
+| 0-100 (test) | 97 | 194 | Numbers 1–100 | `published/gold/0-100患者信息.csv` (Type 1, tab-separated) |
+| 1-52 (train/dev) | 52 | 104 | `功能_1`, `机械_1`... | `published/gold/1-52患者信息.csv` (Type 2, comma-separated) |
+| 100-150 | 50 | 100 | Numbers 1–50 | `published/gold/100-200患者信息.csv` (Type 1) |
+| 150-200 | 50 | 98 | Numbers 51–69, 100 | Same as above |
+
+Data is received in batches from clinicians and is still being added.
+
+### Gold standard formats
+
+**Type 1 (patient-level, tab-separated)**: `case_id`, `性别`, `年龄`, `左肾`, `右肾`. Short labels (`机械`→机械性梗阻, `功能`→功能性梗阻, `混合`→混合性梗阻, `正常`→正常肾脏, `排泄不明显`→功能性梗阻). Empty cell = normal.
+
+**Type 2 (kidney-level, comma-separated)**: `case_name`, `kidney_side`, `true_label`. Full labels.
+
+### Case directory structure (local only, in data/)
+
+```
+case_dir/
+├── images/              # 130 raw dynamic frames
+├── images_fused_26/     # 26 fused images
+├── labels/              # JSON ROI annotations
+├── kidney_crop/         # Cropped kidney regions (512×512)
+└── process_params.json  # Processing parameters
+```
+
+## Key pipelines
+
+### ablation/ — Main active pipelines
+
+Two-stage architecture: Stage 1 (VLM image evidence extraction) → Stage 2 (LLM text-based classification):
+
+| Script | Description |
+|--------|-------------|
+| `baseline_qwen.py` | Qwen baseline (most frequently used) |
+| `baseline_gpt.py` | GPT baseline |
+| `baseline_claude.py` | Claude baseline |
+| `full_vlm.py` | Full pipeline (image + TAC) |
+| `no_tac.py` | Ablation: no TAC assistance |
+| `tac_only.py` | Ablation: TAC only (no images) |
+| `points_130.py` | Uses all 130 frames instead of fused 26 |
+
+All use `DATASET_DIR` and `RESULTS_DIR` constants that may need updating per run.
+
+### tests/fair_compare/ — Fair comparison pipeline
+
+Complete pipeline for controlled comparison between methods (doctor-annotated ROI vs UNet-predicted ROI).
+
+## Preprocessing chain
+
+```
+130 raw frames
+    │
+    ├─→ preprocessing/fuse_frames.py
+    │   Grouped averaging → 26 fused images
+    │
+    └─→ preprocessing/crop_kidney.py
+        Load ROI → crop dual kidneys → 40% padding → 512×512
+```
 
 ## Evaluation
 
-**`ratio.py`** — Computes accuracy, confusion matrix, and per-class precision/recall/F1 from `eval.csv`. Uses sklearn metrics with fixed label order: 正常肾脏 (3), 功能性梗阻 (0), 混合性梗阻 (2), 机械性梗阻 (1).
+**Primary tool**: `evaluation/evaluate.py`
 
-**`eval.csv`** — Ground truth + prediction comparison table with columns `true_label` and `pred_label` (numeric codes 0-3).
+Computes: Accuracy, Cohen's Kappa (linear + quadratic), Macro/Weighted F1, per-class Sensitivity/Specificity/PPV/NPV/F1, confusion matrix, 95% Bootstrap CI (patient-level resampling, n=1000), McNemar paired test with Holm correction.
 
-## Utility scripts
+```bash
+# Single evaluation
+python evaluation/evaluate.py \
+  --gold-csv published/gold/0-100患者信息.csv \
+  --results-dir published/results/0-100_test/results_ai_ai_baseline_gpt_test1
 
-- **`create_fused_images_custom.py`** — Fuses 130 raw frames into 26 fused images using configurable frame ranges.
-- **`preprocess_images.py`** — Crops kidney ROIs from images based on label JSON annotations, enhances contrast.
-- **`copy_images.py`** / **`copy_labels.py`** — One-off scripts to copy `images/` and `labels/` directories from `dataset/` to `datasets_12/`.
-- **`check_dataset.py`** — Inspects dataset directory structure and case naming.
+# Type 2 format
+python evaluation/evaluate.py \
+  --gold-csv published/gold/1-52患者信息.csv \
+  --results-dir published/results/1-52/results_ai_ai
+
+# Batch evaluation
+python evaluation/batch_evaluate.py
+```
+
+Two gold standard formats are auto-detected. `--no-swap` disables left/right kidney swap (image-left = patient's right kidney is the default convention).
 
 ## Key design patterns
 
-- **Temperature = 0.0** is used in newer pipelines for deterministic/reproducible research outputs. Earlier pipelines used higher temperatures (0.3–0.6).
-- **JSON retry logic**: Most pipelines include `MAX_JSON_RETRIES` with regex fallback parsing when the VLM doesn't produce valid JSON.
-- **Strict output vocabularies**: Each pipeline defines `ALLOWED_*` sets and validates VLM outputs against them, falling back to defaults (typically "难以判断" / "uncertain") on mismatch.
-- **Diuretic timing prior**: Frame ~80–90 in the original 130-frame sequence is the diuretic administration point. This is a fixed protocol constant used across pipelines.
-- **Left/right convention**: In the images, image-left = patient's right kidney, image-right = patient's left kidney.
+- **Temperature = 0.0** — deterministic output for research reproducibility.
+- **JSON retry logic** — `MAX_JSON_RETRIES` with regex fallback when VLM output isn't valid JSON.
+- **Strict output vocabularies** — `ALLOWED_*` sets with whitelist validation, fallback to defaults on mismatch.
+- **Diuretic timing prior** — Frame 80–90 in the 130-frame sequence is the diuretic injection point.
+- **Left/right convention** — image-left = patient's right kidney, image-right = patient's left kidney. Prediction JSONs use image-space naming so `evaluate.py` auto-swaps by default.
