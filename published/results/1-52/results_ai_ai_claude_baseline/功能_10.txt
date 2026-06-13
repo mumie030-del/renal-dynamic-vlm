@@ -1,0 +1,99 @@
+【Stage1 原始输出】
+```json
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_drop_presence": "明确连续下降",
+    "post_emptying_sufficiency": "排空不充分",
+    "collecting_system_change": "范围部分缩小",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "中",
+    "late_retention_relative_to_diuretic": "明显低于利尿时相",
+    "overall_dynamic_pattern": "排空延迟且后期改善不充分",
+    "reasoning_focus": "早期显影及时，利尿前持续积聚至峰值（帧96），利尿后图像可见集合系统范围逐步缩小，末期残留仍为中等水平，排空不充分。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_drop_presence": "明确连续下降",
+    "post_emptying_sufficiency": "排空不充分",
+    "collecting_system_change": "范围部分缩小",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "中",
+    "late_retention_relative_to_diuretic": "明显低于利尿时相",
+    "overall_dynamic_pattern": "排空延迟且后期改善不充分",
+    "reasoning_focus": "早期显影及时，利尿前持续积聚达峰（帧81），利尿后集合系统范围连续缩小，末期残留仍为中等，整体排空不充分。"
+  },
+  "image_tac_consistency": "高",
+  "confidence": "中"
+}
+```
+
+【Stage1 校验后结构化证据】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_drop_presence": "明确连续下降",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "中",
+    "overall_dynamic_pattern": "排空延迟且后期改善不充分",
+    "reasoning_focus": "早期显影及时，利尿前持续积聚至峰值（帧96），利尿后图像可见集合系统范围逐步缩小，末期残留仍为中等水平，排空不充分。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_drop_presence": "明确连续下降",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "中",
+    "overall_dynamic_pattern": "排空延迟且后期改善不充分",
+    "reasoning_focus": "早期显影及时，利尿前持续积聚达峰（帧81），利尿后集合系统范围连续缩小，末期残留仍为中等，整体排空不充分。"
+  },
+  "image_tac_consistency": "高",
+  "confidence": "中"
+}
+
+【Stage2 原始输出】
+```json
+{
+  "right_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "中",
+    "reasoning": "利尿前持续积聚至晚期达峰，利尿后有一定改善但排空不充分，末期残留中等，整体介于功能性与机械性之间，符合混合性梗阻特征。"
+  },
+  "left_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "中",
+    "reasoning": "利尿前持续积聚至晚期达峰，利尿后集合系统范围连续缩小但末期残留仍为中等，排空不充分，整体模式与混合性梗阻一致。"
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "中"
+}
+```
+
+【Stage2 校验后最终分型】
+{
+  "right_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "中",
+    "reasoning": "利尿前持续积聚至晚期达峰，利尿后有一定改善但排空不充分，末期残留中等，整体介于功能性与机械性之间，符合混合性梗阻特征。"
+  },
+  "left_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "中",
+    "reasoning": "利尿前持续积聚至晚期达峰，利尿后集合系统范围连续缩小但末期残留仍为中等，排空不充分，整体模式与混合性梗阻一致。"
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "中"
+}
+
+【最终回答】
+右肾：混合性梗阻；利尿前持续积聚至晚期达峰，利尿后有一定改善但排空不充分，末期残留中等，整体介于功能性与机械性之间，符合混合性梗阻特征。
+左肾：混合性梗阻；利尿前持续积聚至晚期达峰，利尿后集合系统范围连续缩小但末期残留仍为中等，排空不充分，整体模式与混合性梗阻一致。
+图像TAC一致性：高
+置信度：中

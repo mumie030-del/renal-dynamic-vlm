@@ -1,0 +1,42 @@
+{
+  "case_name": "80",
+  "stage1_raw": "```json\n{\n  \"right_kidney\": {\n    \"early_visualization\": \"轻度延迟\",\n    \"peak_timing\": \"晚期达峰\",\n    \"pre_diuretic_trend\": \"持续上升或进行性积聚\",\n    \"post_drop_presence\": \"无明确下降或继续上升\",\n    \"post_emptying_sufficiency\": \"基本未排空\",\n    \"collecting_system_change\": \"范围无明显缩小\",\n    \"post_diuretic_response\": \"几乎无明显改善\",\n    \"late_phase_retention\": \"高\",\n    \"late_retention_relative_to_diuretic\": \"接近或高于利尿时相\",\n    \"overall_dynamic_pattern\": \"持续滞留无实质改善\",\n    \"reasoning_focus\": \"右肾显影淡，TAC呈持续上升型，未见明确峰值。利尿后图像及曲线均无下降趋势，末期放射性严重滞留，集合系统范围无缩小，提示无有效排空。\"\n  },\n  \"left_kidney\": {\n    \"early_visualization\": \"及时\",\n    \"peak_timing\": \"早期达峰\",\n    \"pre_diuretic_trend\": \"已开始自然下降\",\n    \"post_drop_presence\": \"明确连续下降\",\n    \"post_emptying_sufficiency\": \"排空较充分\",\n    \"collecting_system_change\": \"范围明显缩小\",\n    \"post_diuretic_response\": \"明显持续改善\",\n    \"late_phase_retention\": \"低\",\n    \"late_retention_relative_to_diuretic\": \"明显低于利尿时相\",\n    \"overall_dynamic_pattern\": \"排空协调\",\n    \"reasoning_focus\": \"左肾显影迅速，早期达峰后自然下降。利尿后TAC及图像均显示放射性进一步快速清除，末期残留极低，集合系统排空良好，动态过程协调。\"\n  },\n  \"image_tac_consistency\": \"高\",\n  \"confidence\": \"高\"\n}\n```",
+  "stage1_validated": {
+    "right_kidney": {
+      "early_visualization": "轻度延迟",
+      "peak_timing": "晚期达峰",
+      "pre_diuretic_trend": "持续上升或进行性积聚",
+      "post_diuretic_response": "几乎无明显改善",
+      "late_phase_retention": "高",
+      "overall_pattern": "难以判断",
+      "reasoning_focus": "右肾显影淡，TAC呈持续上升型，未见明确峰值。利尿后图像及曲线均无下降趋势，末期放射性严重滞留，集合系统范围无缩小，提示"
+    },
+    "left_kidney": {
+      "early_visualization": "及时",
+      "peak_timing": "早期达峰",
+      "pre_diuretic_trend": "已开始自然下降",
+      "post_diuretic_response": "明显持续改善",
+      "late_phase_retention": "低",
+      "overall_pattern": "难以判断",
+      "reasoning_focus": "左肾显影迅速，早期达峰后自然下降。利尿后TAC及图像均显示放射性进一步快速清除，末期残留极低，集合系统排空良好，动态过程"
+    },
+    "image_tac_consistency": "高",
+    "confidence": "高"
+  },
+  "stage2_raw": "{\n  \"right_kidney\": {\n    \"final_label\": \"机械性梗阻\",\n    \"confidence\": \"高\",\n    \"reasoning\": \"右肾显影淡，TAC持续上升无峰值，利尿后放射性严重滞留且集合系统无缩小，提示固定性受阻。\"\n  },\n  \"left_kidney\": {\n    \"final_label\": \"正常肾脏\",\n    \"confidence\": \"高\",\n    \"reasoning\": \"左肾显影及时，早期达峰后自然下降，利尿后排空良好且残留极低，符合生理性排泄过程。\"\n  },\n  \"image_tac_consistency\": \"高\",\n  \"overall_confidence\": \"高\"\n}",
+  "stage2_validated": {
+    "right_kidney": {
+      "final_label": "机械性梗阻",
+      "confidence": "高",
+      "reasoning": "右肾显影淡，TAC持续上升无峰值，利尿后放射性严重滞留且集合系统无缩小，提示固定性受阻。"
+    },
+    "left_kidney": {
+      "final_label": "正常肾脏",
+      "confidence": "高",
+      "reasoning": "左肾显影及时，早期达峰后自然下降，利尿后排空良好且残留极低，符合生理性排泄过程。"
+    },
+    "image_tac_consistency": "高",
+    "overall_confidence": "高"
+  },
+  "final_report": "右肾：机械性梗阻；右肾显影淡，TAC持续上升无峰值，利尿后放射性严重滞留且集合系统无缩小，提示固定性受阻。\n左肾：正常肾脏；左肾显影及时，早期达峰后自然下降，利尿后排空良好且残留极低，符合生理性排泄过程。\n图像TAC一致性：高\n置信度：高"
+}

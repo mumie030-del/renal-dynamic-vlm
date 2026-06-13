@@ -1,0 +1,82 @@
+【Stage1 原始输出】
+```json
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "中",
+    "overall_pattern": "排空延迟但可改善",
+    "reasoning_focus": "第44帧达峰，利尿前已呈自然下降趋势；利尿后曲线显著下行（降幅0.42），排空反应良好，但末期残留仍达0.16，提示排空稍慢。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "中",
+    "overall_pattern": "介于可改善与持续滞留之间",
+    "reasoning_focus": "第40帧达峰，利尿前自然下降；利尿后虽有下降（降幅0.23）但幅度不及右肾，且末期残留0.14，整体排空不如右肾协调。"
+  },
+  "confidence": "高"
+}
+```
+
+【Stage1 校验后结构化证据】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "中",
+    "overall_pattern": "排空延迟但可改善",
+    "reasoning_focus": "第44帧达峰，利尿前已呈自然下降趋势；利尿后曲线显著下行（降幅0.42），排空反应良好，但末期残留仍达0.16，提示排空"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "中",
+    "overall_pattern": "介于可改善与持续滞留之间",
+    "reasoning_focus": "第40帧达峰，利尿前自然下降；利尿后虽有下降（降幅0.23）但幅度不及右肾，且末期残留0.14，整体排空不如右肾协调。"
+  },
+  "confidence": "高"
+}
+
+【Stage2 原始输出】
+{
+  "right_kidney": {
+    "final_label": "功能性梗阻",
+    "confidence": "高",
+    "reasoning": "利尿后曲线显著下行，排空反应良好，虽末期有残留但整体呈可改善的排泄延迟模式，符合功能性改变。"
+  },
+  "left_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "中",
+    "reasoning": "利尿后虽有下降但幅度不足，排空协调性差，介于功能改善与持续滞留之间，提示可能存在混合性因素。"
+  },
+  "overall_confidence": "高"
+}
+
+【Stage2 校验后最终分型】
+{
+  "right_kidney": {
+    "final_label": "功能性梗阻",
+    "confidence": "高",
+    "reasoning": "利尿后曲线显著下行，排空反应良好，虽末期有残留但整体呈可改善的排泄延迟模式，符合功能性改变。"
+  },
+  "left_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "中",
+    "reasoning": "利尿后虽有下降但幅度不足，排空协调性差，介于功能改善与持续滞留之间，提示可能存在混合性因素。"
+  },
+  "overall_confidence": "高"
+}
+
+【最终回答】
+右肾：功能性梗阻；利尿后曲线显著下行，排空反应良好，虽末期有残留但整体呈可改善的排泄延迟模式，符合功能性改变。
+左肾：混合性梗阻；利尿后虽有下降但幅度不足，排空协调性差，介于功能改善与持续滞留之间，提示可能存在混合性因素。
+置信度：高

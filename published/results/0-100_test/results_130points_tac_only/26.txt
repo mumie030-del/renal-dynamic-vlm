@@ -1,0 +1,82 @@
+【Stage1 原始输出】
+```json
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "高",
+    "overall_pattern": "介于可改善与持续滞留之间",
+    "reasoning_focus": "曲线呈持续上升型，第102帧达峰。利尿后下降幅度0.36，但末期均值仍高达0.8959，排空不彻底，符合混合性梗阻特征。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "高",
+    "overall_pattern": "介于可改善与持续滞留之间",
+    "reasoning_focus": "曲线呈持续上升型，第107帧达峰。利尿后下降幅度0.34，但末期均值仍高达0.9263，存在明显高位残留，提示混合性梗阻。"
+  },
+  "confidence": "高"
+}
+```
+
+【Stage1 校验后结构化证据】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "高",
+    "overall_pattern": "介于可改善与持续滞留之间",
+    "reasoning_focus": "曲线呈持续上升型，第102帧达峰。利尿后下降幅度0.36，但末期均值仍高达0.8959，排空不彻底，符合混合性梗阻特征。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "高",
+    "overall_pattern": "介于可改善与持续滞留之间",
+    "reasoning_focus": "曲线呈持续上升型，第107帧达峰。利尿后下降幅度0.34，但末期均值仍高达0.9263，存在明显高位残留，提示混合性梗阻"
+  },
+  "confidence": "高"
+}
+
+【Stage2 原始输出】
+{
+  "right_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "高",
+    "reasoning": "利尿后虽有改善但排空不彻底，末期高残留，符合介于功能性与机械性之间的混合特征。"
+  },
+  "left_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "高",
+    "reasoning": "利尿反应不充分且存在明显高位残留，动态曲线提示非单纯功能性延迟，亦非完全固定梗阻。"
+  },
+  "overall_confidence": "高"
+}
+
+【Stage2 校验后最终分型】
+{
+  "right_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "高",
+    "reasoning": "利尿后虽有改善但排空不彻底，末期高残留，符合介于功能性与机械性之间的混合特征。"
+  },
+  "left_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "高",
+    "reasoning": "利尿反应不充分且存在明显高位残留，动态曲线提示非单纯功能性延迟，亦非完全固定梗阻。"
+  },
+  "overall_confidence": "高"
+}
+
+【最终回答】
+右肾：混合性梗阻；利尿后虽有改善但排空不彻底，末期高残留，符合介于功能性与机械性之间的混合特征。
+左肾：混合性梗阻；利尿反应不充分且存在明显高位残留，动态曲线提示非单纯功能性延迟，亦非完全固定梗阻。
+置信度：高

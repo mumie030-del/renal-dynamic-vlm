@@ -1,0 +1,87 @@
+【Stage1 原始输出】
+```json
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "基本平台或轻度滞留",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "高",
+    "overall_pattern": "介于可改善与持续滞留之间",
+    "reasoning_focus": "中期达峰后呈平台状，利尿后可见放射性下降但幅度不足，末期肾盂仍有明显高位残留，排空不彻底。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "基本平台或轻度滞留",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "高",
+    "overall_pattern": "介于可改善与持续滞留之间",
+    "reasoning_focus": "中期达峰后维持高位，利尿后虽有下降趋势但未恢复顺畅排空，末期集合系统仍见明确中高度放射性残留。"
+  },
+  "image_tac_consistency": "高",
+  "confidence": "高"
+}
+```
+
+【Stage1 校验后结构化证据】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "基本平台或轻度滞留",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "高",
+    "overall_pattern": "介于可改善与持续滞留之间",
+    "reasoning_focus": "中期达峰后呈平台状，利尿后可见放射性下降但幅度不足，末期肾盂仍有明显高位残留，排空不彻底。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "基本平台或轻度滞留",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "高",
+    "overall_pattern": "介于可改善与持续滞留之间",
+    "reasoning_focus": "中期达峰后维持高位，利尿后虽有下降趋势但未恢复顺畅排空，末期集合系统仍见明确中高度放射性残留。"
+  },
+  "image_tac_consistency": "高",
+  "confidence": "高"
+}
+
+【Stage2 原始输出】
+{
+  "right_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "高",
+    "reasoning": "利尿后虽有改善但不充分，末期仍见高位残留，整体模式介于可改善与持续滞留之间，符合混合性特征。"
+  },
+  "left_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "高",
+    "reasoning": "利尿后排空未恢复顺畅，集合系统仍有中高度残留，动态演变显示既有部分反应又有固定滞留，属混合性梗阻。"
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "高"
+}
+
+【Stage2 校验后最终分型】
+{
+  "right_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "高",
+    "reasoning": "利尿后虽有改善但不充分，末期仍见高位残留，整体模式介于可改善与持续滞留之间，符合混合性特征。"
+  },
+  "left_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "高",
+    "reasoning": "利尿后排空未恢复顺畅，集合系统仍有中高度残留，动态演变显示既有部分反应又有固定滞留，属混合性梗阻。"
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "高"
+}
+
+【最终回答】
+右肾：混合性梗阻；利尿后虽有改善但不充分，末期仍见高位残留，整体模式介于可改善与持续滞留之间，符合混合性特征。
+左肾：混合性梗阻；利尿后排空未恢复顺畅，集合系统仍有中高度残留，动态演变显示既有部分反应又有固定滞留，属混合性梗阻。
+图像TAC一致性：高
+置信度：高

@@ -1,0 +1,82 @@
+【Stage1 原始输出】
+```json
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "基本平台或轻度滞留",
+    "post_diuretic_response": "几乎无明显改善",
+    "late_phase_retention": "高",
+    "overall_pattern": "持续高位滞留",
+    "reasoning_focus": "达峰晚（69帧），利尿前呈平台状，利尿后曲线无下降趋势且维持高位，末期残留极高（0.81），提示严重排泄受阻。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "整体排空协调",
+    "reasoning_focus": "达峰较早（51帧），利尿前已自然下降，利尿后进一步显著降低，末期残留低（0.38），符合正常肾脏排泄动力学特征。"
+  },
+  "confidence": "高"
+}
+```
+
+【Stage1 校验后结构化证据】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "基本平台或轻度滞留",
+    "post_diuretic_response": "几乎无明显改善",
+    "late_phase_retention": "高",
+    "overall_pattern": "持续高位滞留",
+    "reasoning_focus": "达峰晚（69帧），利尿前呈平台状，利尿后曲线无下降趋势且维持高位，末期残留极高（0.81），提示严重排泄受阻。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "整体排空协调",
+    "reasoning_focus": "达峰较早（51帧），利尿前已自然下降，利尿后进一步显著降低，末期残留低（0.38），符合正常肾脏排泄动力学特征。"
+  },
+  "confidence": "高"
+}
+
+【Stage2 原始输出】
+{
+  "right_kidney": {
+    "final_label": "机械性梗阻",
+    "confidence": "高",
+    "reasoning": "晚期达峰伴利尿前平台及利尿后无改善，持续高位滞留且末期残留极高，符合固定性严重排泄受阻特征。"
+  },
+  "left_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "中期达峰，利尿前已自然下降，利尿后排空进一步显著改善且末期残留低，符合正常肾脏排泄动力学。"
+  },
+  "overall_confidence": "高"
+}
+
+【Stage2 校验后最终分型】
+{
+  "right_kidney": {
+    "final_label": "机械性梗阻",
+    "confidence": "高",
+    "reasoning": "晚期达峰伴利尿前平台及利尿后无改善，持续高位滞留且末期残留极高，符合固定性严重排泄受阻特征。"
+  },
+  "left_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "中期达峰，利尿前已自然下降，利尿后排空进一步显著改善且末期残留低，符合正常肾脏排泄动力学。"
+  },
+  "overall_confidence": "高"
+}
+
+【最终回答】
+右肾：机械性梗阻；晚期达峰伴利尿前平台及利尿后无改善，持续高位滞留且末期残留极高，符合固定性严重排泄受阻特征。
+左肾：正常肾脏；中期达峰，利尿前已自然下降，利尿后排空进一步显著改善且末期残留低，符合正常肾脏排泄动力学。
+置信度：高

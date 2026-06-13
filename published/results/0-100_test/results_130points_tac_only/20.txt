@@ -1,0 +1,82 @@
+【Stage1 原始输出】
+```json
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "整体排空协调",
+    "reasoning_focus": "第40帧达峰，利尿前已呈自然下降趋势；利尿后曲线持续显著下降，末帧降至0.1022（低残留），符合正常排泄特征。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "整体排空协调",
+    "reasoning_focus": "第44帧达峰，利尿前已有下降趋势；利尿后放射性浓度持续降低，末帧降至0.0833（低残留），无梗阻迹象。"
+  },
+  "confidence": "高"
+}
+```
+
+【Stage1 校验后结构化证据】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "整体排空协调",
+    "reasoning_focus": "第40帧达峰，利尿前已呈自然下降趋势；利尿后曲线持续显著下降，末帧降至0.1022（低残留），符合正常排泄特征。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "整体排空协调",
+    "reasoning_focus": "第44帧达峰，利尿前已有下降趋势；利尿后放射性浓度持续降低，末帧降至0.0833（低残留），无梗阻迹象。"
+  },
+  "confidence": "高"
+}
+
+【Stage2 原始输出】
+{
+  "right_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "显影及时，利尿前已自然下降，利尿后持续显著改善且残留极低，符合生理性排泄特征，无梗阻证据。"
+  },
+  "left_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "显影及时，达峰后呈自然下降趋势，利尿反应良好，末期低残留，整体排空协调，排除机械性或功能性梗阻。"
+  },
+  "overall_confidence": "高"
+}
+
+【Stage2 校验后最终分型】
+{
+  "right_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "显影及时，利尿前已自然下降，利尿后持续显著改善且残留极低，符合生理性排泄特征，无梗阻证据。"
+  },
+  "left_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "显影及时，达峰后呈自然下降趋势，利尿反应良好，末期低残留，整体排空协调，排除机械性或功能性梗阻。"
+  },
+  "overall_confidence": "高"
+}
+
+【最终回答】
+右肾：正常肾脏；显影及时，利尿前已自然下降，利尿后持续显著改善且残留极低，符合生理性排泄特征，无梗阻证据。
+左肾：正常肾脏；显影及时，达峰后呈自然下降趋势，利尿反应良好，末期低残留，整体排空协调，排除机械性或功能性梗阻。
+置信度：高

@@ -1,0 +1,158 @@
+【Stage1 原始输出】
+```json
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "几乎无明显改善",
+    "late_phase_retention": "高",
+    "overall_pattern": "持续高位滞留",
+    "reasoning_focus": "右肾显影后放射性持续积聚，利尿前未见下降趋势，利尿后影像无排空迹象，末期呈高位致密团块状残留。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "排空延迟但可改善",
+    "reasoning_focus": "左肾早期积聚明显，利尿前处于高位平台，给予利尿剂后影像迅速变淡、排空顺畅，末期残留极低。"
+  },
+  "image_tac_consistency": "高",
+  "confidence": "高"
+}
+```
+
+【Stage1 校验后结构化证据】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "几乎无明显改善",
+    "late_phase_retention": "高",
+    "overall_pattern": "持续高位滞留",
+    "reasoning_focus": "右肾显影后放射性持续积聚，利尿前未见下降趋势，利尿后影像无排空迹象，末期呈高位致密团块状残留。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "排空延迟但可改善",
+    "reasoning_focus": "左肾早期积聚明显，利尿前处于高位平台，给予利尿剂后影像迅速变淡、排空顺畅，末期残留极低。"
+  },
+  "image_tac_consistency": "高",
+  "confidence": "高"
+}
+
+【Stage2 原始输出】
+{
+  "right_kidney": {
+    "final_label": "机械性梗阻",
+    "confidence": "高",
+    "reasoning": "右肾利尿前后均呈持续高位滞留，排空无改善，符合固定性机械梗阻特征。"
+  },
+  "left_kidney": {
+    "final_label": "功能性梗阻",
+    "confidence": "高",
+    "reasoning": "左肾虽达峰晚且积聚，但利尿后排空明显改善、残留低，提示非机械性排泄延迟。"
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "高"
+}
+
+【Stage2 校验后最终分型】
+{
+  "right_kidney": {
+    "final_label": "机械性梗阻",
+    "confidence": "高",
+    "reasoning": "右肾利尿前后均呈持续高位滞留，排空无改善，符合固定性机械梗阻特征。"
+  },
+  "left_kidney": {
+    "final_label": "功能性梗阻",
+    "confidence": "高",
+    "reasoning": "左肾虽达峰晚且积聚，但利尿后排空明显改善、残留低，提示非机械性排泄延迟。"
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "高"
+}
+
+【Stage3 原始输出：混合型偏向判定】
+{
+  "right_kidney": "",
+  "left_kidney": ""
+}
+
+【Stage3 校验后结果：混合型偏向判定】
+{
+  "right_kidney": null,
+  "left_kidney": null
+}
+
+【增强版结构化输出】
+{
+  "right_kidney": {
+    "final_label": "机械性梗阻",
+    "confidence": "高",
+    "reasoning": "右肾利尿前后均呈持续高位滞留，排空无改善，符合固定性机械梗阻特征。",
+    "judgment_standard": "持续高位滞留，利尿后改善极少或无明显改善，末期残留高，更符合固定性受阻。",
+    "diagnostic_suggestion": "建议结合解剖影像、肾功能和临床症状尽快评估固定性梗阻可能，必要时转泌尿外科。",
+    "mixed_bias": null
+  },
+  "left_kidney": {
+    "final_label": "功能性梗阻",
+    "confidence": "高",
+    "reasoning": "左肾虽达峰晚且积聚，但利尿后排空明显改善、残留低，提示非机械性排泄延迟。",
+    "judgment_standard": "以排泄延迟但可改善为主，利尿后下降明确，提示排空受影响，但不支持固定性重度受阻。",
+    "diagnostic_suggestion": "建议结合病史、超声或其他解剖影像综合评估，并观察随访与保守处理反应。",
+    "mixed_bias": null
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "高"
+}
+
+【原最终回答（保留原模板）】
+右肾：机械性梗阻；右肾利尿前后均呈持续高位滞留，排空无改善，符合固定性机械梗阻特征。
+左肾：功能性梗阻；左肾虽达峰晚且积聚，但利尿后排空明显改善、残留低，提示非机械性排泄延迟。
+图像TAC一致性：高
+置信度：高
+
+【增强版最终回答】
+病例：机械_20
+
+【右肾】
+最终分型：机械性梗阻
+置信度：高
+综合依据：右肾利尿前后均呈持续高位滞留，排空无改善，符合固定性机械梗阻特征。
+判断标准和原则（100字内）：持续高位滞留，利尿后改善极少或无明显改善，末期残留高，更符合固定性受阻。
+诊断建议：建议结合解剖影像、肾功能和临床症状尽快评估固定性梗阻可能，必要时转泌尿外科。
+
+【左肾】
+最终分型：功能性梗阻
+置信度：高
+综合依据：左肾虽达峰晚且积聚，但利尿后排空明显改善、残留低，提示非机械性排泄延迟。
+判断标准和原则（100字内）：以排泄延迟但可改善为主，利尿后下降明确，提示排空受影响，但不支持固定性重度受阻。
+诊断建议：建议结合病史、超声或其他解剖影像综合评估，并观察随访与保守处理反应。
+
+图像TAC一致性：高
+总体置信度：高
+
+【Stage4 标准医生诊断报告】
+检查名称：
+肾动态显像（99mTc-EC）
+
+影像所见：
+右肾早期显影及时，但放射性摄取后呈持续上升或进行性积聚趋势，达峰时间延迟。在给予利尿剂前，曲线未见下降趋势；利尿干预后，影像及时间-放射性曲线均几乎无明显改善，晚期相显示肾区有高浓度放射性滞留，呈高位致密团块状残留。左肾早期显影亦及时，同样表现为晚期达峰及利尿前的持续高位平台期积聚。然而，在给予利尿剂后，左肾影像迅速变淡，时间-放射性曲线显示排空顺畅且明显改善，末期残留放射性极低。双肾图像表现与时间-放射性曲线变化具有高度一致性。
+
+影像分析：
+本例双肾虽均表现出排泄延迟及积聚现象，但对利尿试验的反应截然不同。右肾在利尿前后均呈现持续高位滞留，排空功能未获任何实质性改善，符合固定性流出道受阻的血流动力学特征。相比之下，左肾虽然存在非特异性排泄延迟，但利尿后排空反应良好，残留极少，提示其梗阻因素主要源于功能性或非机械性因素，而非解剖结构的固定性狭窄。整体图像质量佳，判读置信度高。
+
+诊断意见：
+1. 右肾：符合机械性梗阻改变。
+2. 左肾：符合功能性梗阻（非机械性排泄延迟）。
+
+临床建议：
+鉴于右肾呈现典型的机械性梗阻特征，建议结合泌尿系CTU、超声等解剖影像学检查及肾功能指标，尽快评估梗阻部位及程度，并请泌尿外科会诊以制定进一步治疗方案。左肾情况相对乐观，建议结合临床病史定期随访观察，监测肾功能变化，暂无需激进干预，除非出现临床症状加重。

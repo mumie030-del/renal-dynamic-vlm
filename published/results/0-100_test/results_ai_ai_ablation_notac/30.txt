@@ -1,0 +1,82 @@
+【Stage1 原始输出】
+```json
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "高",
+    "overall_pattern": "介于可改善与持续滞留之间",
+    "reasoning_focus": "右肾显影及时，但利尿前呈持续积聚趋势。利尿后放射性浓度虽有可见下降，但排空不充分，末期仍维持高位残留，符合混合性梗阻特征。"
+  },
+  "left_kidney": {
+    "early_visualization": "轻度延迟",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "基本平台或轻度滞留",
+    "post_diuretic_response": "几乎无明显改善",
+    "late_phase_retention": "中",
+    "overall_pattern": "排空延迟但可改善",
+    "reasoning_focus": "左肾显影较淡且延迟，全程呈低水平滞留状态。利尿前后形态及浓度无显著变化，未见明确机械性梗阻的高位扩张表现，倾向于功能受损伴排泄迟缓。"
+  },
+  "confidence": "高"
+}
+```
+
+【Stage1 校验后结构化证据】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "高",
+    "overall_pattern": "介于可改善与持续滞留之间",
+    "reasoning_focus": "右肾显影及时，但利尿前呈持续积聚趋势。利尿后放射性浓度虽有可见下降，但排空不充分，末期仍维持高位残留，符合混合性梗阻特征"
+  },
+  "left_kidney": {
+    "early_visualization": "轻度延迟",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "基本平台或轻度滞留",
+    "post_diuretic_response": "几乎无明显改善",
+    "late_phase_retention": "中",
+    "overall_pattern": "排空延迟但可改善",
+    "reasoning_focus": "左肾显影较淡且延迟，全程呈低水平滞留状态。利尿前后形态及浓度无显著变化，未见明确机械性梗阻的高位扩张表现，倾向于功能受损"
+  },
+  "confidence": "高"
+}
+
+【Stage2 原始输出】
+{
+  "right_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "高",
+    "reasoning": "显影及时但利尿前持续积聚，利尿后排空改善不充分且末期高残留，兼具梗阻与排空障碍特征。"
+  },
+  "left_kidney": {
+    "final_label": "功能性梗阻",
+    "confidence": "中",
+    "reasoning": "显影延迟、达峰晚，利尿前后无明显变化，呈低水平滞留，符合肾功能受损导致的排泄延迟而非机械性阻塞。"
+  },
+  "overall_confidence": "高"
+}
+
+【Stage2 校验后最终分型】
+{
+  "right_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "高",
+    "reasoning": "显影及时但利尿前持续积聚，利尿后排空改善不充分且末期高残留，兼具梗阻与排空障碍特征。"
+  },
+  "left_kidney": {
+    "final_label": "功能性梗阻",
+    "confidence": "中",
+    "reasoning": "显影延迟、达峰晚，利尿前后无明显变化，呈低水平滞留，符合肾功能受损导致的排泄延迟而非机械性阻塞。"
+  },
+  "overall_confidence": "高"
+}
+
+【最终回答】
+右肾：混合性梗阻；显影及时但利尿前持续积聚，利尿后排空改善不充分且末期高残留，兼具梗阻与排空障碍特征。
+左肾：功能性梗阻；显影延迟、达峰晚，利尿前后无明显变化，呈低水平滞留，符合肾功能受损导致的排泄延迟而非机械性阻塞。
+置信度：高

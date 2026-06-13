@@ -1,0 +1,44 @@
+{
+  "case_name": "功能_20",
+  "stage1_raw": "```json\n{\n  \"right_kimney\": {\n    \"early_visualization\": \"轻度延迟\",\n    \"peak_timing\": \"中期达峰\",\n    \"pre_diuretic_trend\": \"已开始自然下降\",\n    \"post_drop_presence\": \"明确连续下降\",\n    \"post_emptying_sufficiency\": \"排空较充分\",\n    \"collecting_system_change\": \"范围明显缩小\",\n    \"post_diuretic_response\": \"明显持续改善\",\n    \"late_phase_retention\": \"低\",\n    \"late_retention_relative_to_diuretic\": \"明显低于利尿时相\",\n    \"overall_dynamic_pattern\": \"排空协调\",\n    \"reasoning_focus\": \"右肾中期达峰，利尿前已自然下降，利尿后持续下降排空充分，末期残留低。\"\n  },\n  \"left_kidney\": {\n    \"early_visualization\": \"轻度延迟\",\n    \"peak_timing\": \"晚期达峰\",\n    \"pre_diuretic_trend\": \"基本平台或轻度滞留\",\n    \"post_drop_presence\": \"明确连续下降\",\n    \"post_emptying_sufficiency\": \"排空不充分\",\n    \"collecting_system_change\": \"范围部分缩小\",\n    \"post_diuretic_response\": \"有一定改善但不充分\",\n    \"late_phase_retention\": \"高\",\n    \"late_retention_relative_to_diuretic\": \"明显低于利尿时相\",\n    \"overall_dynamic_pattern\": \"排空延迟且后期改善不充分\",\n    \"reasoning_focus\": \"左肾晚期达峰，利尿前滞留，利尿后下降但排空不充分，末期残留高。\"\n  },\n  \"image_tac_consistency\": \"高\",\n  \"confidence\": \"高\"\n}\n```",
+  "stage1_validated": {
+    "right_kidney": {
+      "early_visualization": "难以判断",
+      "peak_timing": "难以判断",
+      "pre_diuretic_trend": "难以判断",
+      "post_drop_presence": "难以判断",
+      "post_diuretic_response": "难以判断",
+      "late_phase_retention": "难以判断",
+      "overall_dynamic_pattern": "难以判断",
+      "reasoning_focus": "证据不足"
+    },
+    "left_kidney": {
+      "early_visualization": "轻度延迟",
+      "peak_timing": "晚期达峰",
+      "pre_diuretic_trend": "基本平台或轻度滞留",
+      "post_drop_presence": "明确连续下降",
+      "post_diuretic_response": "有一定改善但不充分",
+      "late_phase_retention": "高",
+      "overall_dynamic_pattern": "排空延迟且后期改善不充分",
+      "reasoning_focus": "左肾晚期达峰，利尿前滞留，利尿后下降但排空不充分，末期残留高。"
+    },
+    "image_tac_consistency": "高",
+    "confidence": "高"
+  },
+  "stage2_raw": "{\n  \"right_kidney\": {\n    \"final_label\": \"难以判断\",\n    \"confidence\": \"低\",\n    \"reasoning\": \"右肾各项动态指标均难以判断，证据不足，无法进行可靠分型。\"\n  },\n  \"left_kidney\": {\n    \"final_label\": \"混合性梗阻\",\n    \"confidence\": \"高\",\n    \"reasoning\": \"左肾晚期达峰且利尿前滞留，利尿后虽有下降但排空改善不充分，末期高滞留，符合混合性梗阻特征。\"\n  },\n  \"image_tac_consistency\": \"高\",\n  \"overall_confidence\": \"中\"\n}",
+  "stage2_validated": {
+    "right_kidney": {
+      "final_label": "难以判断",
+      "confidence": "低",
+      "reasoning": "右肾各项动态指标均难以判断，证据不足，无法进行可靠分型。"
+    },
+    "left_kidney": {
+      "final_label": "混合性梗阻",
+      "confidence": "高",
+      "reasoning": "左肾晚期达峰且利尿前滞留，利尿后虽有下降但排空改善不充分，末期高滞留，符合混合性梗阻特征。"
+    },
+    "image_tac_consistency": "高",
+    "overall_confidence": "中"
+  },
+  "final_report": "右肾：难以判断；右肾各项动态指标均难以判断，证据不足，无法进行可靠分型。\n左肾：混合性梗阻；左肾晚期达峰且利尿前滞留，利尿后虽有下降但排空改善不充分，末期高滞留，符合混合性梗阻特征。\n图像TAC一致性：高\n置信度：中"
+}

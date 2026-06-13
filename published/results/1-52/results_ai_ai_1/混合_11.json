@@ -1,0 +1,72 @@
+{
+  "case_name": "混合_11",
+  "stage1_raw": "```json\n{\n  \"right_kidney\": {\n    \"early_visualization\": \"及时\",\n    \"peak_timing\": \"晚期达峰\",\n    \"pre_diuretic_trend\": \"基本平台或轻度滞留\",\n    \"post_diuretic_response\": \"明显持续改善\",\n    \"late_phase_retention\": \"低\",\n    \"overall_pattern\": \"排空延迟但可改善\",\n    \"reasoning_focus\": \"右肾显影及时，达峰较晚（约80帧），利尿前呈平台状，利尿后TAC曲线显著下降且图像末期残留低，符合功能性梗阻特征。\"\n  },\n  \"left_kidney\": {\n    \"early_visualization\": \"及时\",\n    \"peak_timing\": \"晚期达峰\",\n    \"pre_diuretic_trend\": \"持续上升或进行性积聚\",\n    \"post_diuretic_response\": \"几乎无明显改善\",\n    \"late_phase_retention\": \"高\",\n    \"overall_pattern\": \"持续高位滞留\",\n    \"reasoning_focus\": \"左肾显影及时，但随后持续积聚，利尿后TAC曲线无下降趋势，图像末期仍见高密度放射性浓聚，符合机械性梗阻特征。\"\n  },\n  \"image_tac_consistency\": \"高\",\n  \"confidence\": \"高\"\n}\n```",
+  "stage1_validated": {
+    "right_kidney": {
+      "early_visualization": "及时",
+      "peak_timing": "晚期达峰",
+      "pre_diuretic_trend": "基本平台或轻度滞留",
+      "post_diuretic_response": "明显持续改善",
+      "late_phase_retention": "低",
+      "overall_pattern": "排空延迟但可改善",
+      "reasoning_focus": "右肾显影及时，达峰较晚（约80帧），利尿前呈平台状，利尿后TAC曲线显著下降且图像末期残留低，符合功能性梗阻特征。"
+    },
+    "left_kidney": {
+      "early_visualization": "及时",
+      "peak_timing": "晚期达峰",
+      "pre_diuretic_trend": "持续上升或进行性积聚",
+      "post_diuretic_response": "几乎无明显改善",
+      "late_phase_retention": "高",
+      "overall_pattern": "持续高位滞留",
+      "reasoning_focus": "左肾显影及时，但随后持续积聚，利尿后TAC曲线无下降趋势，图像末期仍见高密度放射性浓聚，符合机械性梗阻特征。"
+    },
+    "image_tac_consistency": "高",
+    "confidence": "高"
+  },
+  "stage2_raw": "{\n  \"right_kidney\": {\n    \"final_label\": \"功能性梗阻\",\n    \"confidence\": \"高\",\n    \"reasoning\": \"利尿后TAC显著下降且末期残留低，证实排空延迟但可改善，符合非固定性受阻的功能性特征。\"\n  },\n  \"left_kidney\": {\n    \"final_label\": \"机械性梗阻\",\n    \"confidence\": \"高\",\n    \"reasoning\": \"利尿后曲线无改善且末期高滞留，提示固定性排出受阻，符合典型机械性梗阻动态演变模式。\"\n  },\n  \"image_tac_consistency\": \"高\",\n  \"overall_confidence\": \"高\"\n}",
+  "stage2_validated": {
+    "right_kidney": {
+      "final_label": "功能性梗阻",
+      "confidence": "高",
+      "reasoning": "利尿后TAC显著下降且末期残留低，证实排空延迟但可改善，符合非固定性受阻的功能性特征。"
+    },
+    "left_kidney": {
+      "final_label": "机械性梗阻",
+      "confidence": "高",
+      "reasoning": "利尿后曲线无改善且末期高滞留，提示固定性排出受阻，符合典型机械性梗阻动态演变模式。"
+    },
+    "image_tac_consistency": "高",
+    "overall_confidence": "高"
+  },
+  "stage3_mixed_bias_raw": {
+    "right_kidney": "",
+    "left_kidney": ""
+  },
+  "stage3_mixed_bias_validated": {
+    "right_kidney": null,
+    "left_kidney": null
+  },
+  "augmented_summary": {
+    "right_kidney": {
+      "final_label": "功能性梗阻",
+      "confidence": "高",
+      "reasoning": "利尿后TAC显著下降且末期残留低，证实排空延迟但可改善，符合非固定性受阻的功能性特征。",
+      "judgment_standard": "以排泄延迟但可改善为主，利尿后下降明确，提示排空受影响，但不支持固定性重度受阻。",
+      "diagnostic_suggestion": "建议结合病史、超声或其他解剖影像综合评估，并观察随访与保守处理反应。",
+      "mixed_bias": null
+    },
+    "left_kidney": {
+      "final_label": "机械性梗阻",
+      "confidence": "高",
+      "reasoning": "利尿后曲线无改善且末期高滞留，提示固定性排出受阻，符合典型机械性梗阻动态演变模式。",
+      "judgment_standard": "持续高位滞留，利尿后改善极少或无明显改善，末期残留高，更符合固定性受阻。",
+      "diagnostic_suggestion": "建议结合解剖影像、肾功能和临床症状尽快评估固定性梗阻可能，必要时转泌尿外科。",
+      "mixed_bias": null
+    },
+    "image_tac_consistency": "高",
+    "overall_confidence": "高"
+  },
+  "original_final_report": "右肾：功能性梗阻；利尿后TAC显著下降且末期残留低，证实排空延迟但可改善，符合非固定性受阻的功能性特征。\n左肾：机械性梗阻；利尿后曲线无改善且末期高滞留，提示固定性排出受阻，符合典型机械性梗阻动态演变模式。\n图像TAC一致性：高\n置信度：高",
+  "enhanced_final_report": "病例：混合_11\n\n【右肾】\n最终分型：功能性梗阻\n置信度：高\n综合依据：利尿后TAC显著下降且末期残留低，证实排空延迟但可改善，符合非固定性受阻的功能性特征。\n判断标准和原则（100字内）：以排泄延迟但可改善为主，利尿后下降明确，提示排空受影响，但不支持固定性重度受阻。\n诊断建议：建议结合病史、超声或其他解剖影像综合评估，并观察随访与保守处理反应。\n\n【左肾】\n最终分型：机械性梗阻\n置信度：高\n综合依据：利尿后曲线无改善且末期高滞留，提示固定性排出受阻，符合典型机械性梗阻动态演变模式。\n判断标准和原则（100字内）：持续高位滞留，利尿后改善极少或无明显改善，末期残留高，更符合固定性受阻。\n诊断建议：建议结合解剖影像、肾功能和临床症状尽快评估固定性梗阻可能，必要时转泌尿外科。\n\n图像TAC一致性：高\n总体置信度：高",
+  "stage4_doctor_report": "检查名称：\n肾动态显像（99mTc-EC）\n\n影像所见：\n双肾血流灌注相及功能相早期显影及时，形态轮廓清晰。右肾皮质摄取放射性分布均匀，达峰时间稍延迟。利尿前时间-放射性曲线（TAC）呈平台状或轻度滞留趋势；给予利尿剂后，右肾TAC曲线出现显著下降，排泄反应良好，图像末期肾区放射性残留较低，提示排空功能虽延迟但具有可逆性。左肾皮质摄取正常，但随后呈现持续上升或进行性积聚态势，达峰明显延迟。利尿前TAC持续高位运行；给予利尿剂后，左肾TAC曲线无明显下降改善，图像末期仍见高密度放射性浓聚，提示存在固定的排出受阻。双肾影像表现与TAC曲线变化高度一致。\n\n影像分析：\n本例双肾动态显像呈现截然不同的排泄模式。右肾表现为排泄延迟，但在利尿干预后引流明显改善，符合非固定性受阻的功能性特征，主要反映肾盂张力增高或动力性排空障碍。左肾则表现为典型的机械性梗阻图形，利尿后无缓解且末期高滞留，提示存在解剖结构上的固定性狭窄或阻塞，导致尿液排出严重受阻。整体图像与曲线逻辑自洽，诊断置信度高。左侧病变更具临床紧迫性，需警惕肾功能受损风险。\n\n诊断意见：\n1. 右肾：功能性梗阻（排空延迟，利尿后改善明显）。\n2. 左肾：机械性梗阻（固定性排出受阻，利尿后无改善）。\n\n临床建议：\n鉴于左肾存在明确的机械性梗阻征象，建议结合泌尿系超声、CTU等解剖影像学检查，尽快评估梗阻部位及程度，并监测分肾功能，必要时转泌尿外科进一步诊治以解除梗阻。右肾目前考虑为功能性改变，建议结合临床症状及病史进行保守观察与随访，定期复查肾动态显像以监测病情演变。请结合临床其他资料综合决策。"
+}

@@ -1,0 +1,158 @@
+【Stage1 原始输出】
+```json
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "基本平台或轻度滞留",
+    "post_diuretic_response": "几乎无明显改善",
+    "late_phase_retention": "高",
+    "overall_pattern": "持续高位滞留",
+    "reasoning_focus": "右肾显影后放射性持续积聚，利尿前呈平台状，利尿后影像及TAC均无下降趋势，末期残留极高，符合机械性梗阻特征。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "整体排空协调",
+    "reasoning_focus": "左肾达峰后自然下降，利尿后进一步加速排空，末期影像清晰、TAC降至低位，整体动态模式正常。"
+  },
+  "image_tac_consistency": "高",
+  "confidence": "高"
+}
+```
+
+【Stage1 校验后结构化证据】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "基本平台或轻度滞留",
+    "post_diuretic_response": "几乎无明显改善",
+    "late_phase_retention": "高",
+    "overall_pattern": "持续高位滞留",
+    "reasoning_focus": "右肾显影后放射性持续积聚，利尿前呈平台状，利尿后影像及TAC均无下降趋势，末期残留极高，符合机械性梗阻特征。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "整体排空协调",
+    "reasoning_focus": "左肾达峰后自然下降，利尿后进一步加速排空，末期影像清晰、TAC降至低位，整体动态模式正常。"
+  },
+  "image_tac_consistency": "高",
+  "confidence": "高"
+}
+
+【Stage2 原始输出】
+{
+  "right_kidney": {
+    "final_label": "机械性梗阻",
+    "confidence": "高",
+    "reasoning": "右肾显影后持续高位滞留，利尿前后TAC及影像均无改善，符合固定性机械梗阻特征。"
+  },
+  "left_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "左肾达峰后自然下降，利尿后排空进一步加速且末期残留低，动态模式完全正常。"
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "高"
+}
+
+【Stage2 校验后最终分型】
+{
+  "right_kidney": {
+    "final_label": "机械性梗阻",
+    "confidence": "高",
+    "reasoning": "右肾显影后持续高位滞留，利尿前后TAC及影像均无改善，符合固定性机械梗阻特征。"
+  },
+  "left_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "左肾达峰后自然下降，利尿后排空进一步加速且末期残留低，动态模式完全正常。"
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "高"
+}
+
+【Stage3 原始输出：混合型偏向判定】
+{
+  "right_kidney": "",
+  "left_kidney": ""
+}
+
+【Stage3 校验后结果：混合型偏向判定】
+{
+  "right_kidney": null,
+  "left_kidney": null
+}
+
+【增强版结构化输出】
+{
+  "right_kidney": {
+    "final_label": "机械性梗阻",
+    "confidence": "高",
+    "reasoning": "右肾显影后持续高位滞留，利尿前后TAC及影像均无改善，符合固定性机械梗阻特征。",
+    "judgment_standard": "持续高位滞留，利尿后改善极少或无明显改善，末期残留高，更符合固定性受阻。",
+    "diagnostic_suggestion": "建议结合解剖影像、肾功能和临床症状尽快评估固定性梗阻可能，必要时转泌尿外科。",
+    "mixed_bias": null
+  },
+  "left_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "左肾达峰后自然下降，利尿后排空进一步加速且末期残留低，动态模式完全正常。",
+    "judgment_standard": "整体显影、达峰与排泄接近生理过程，利尿前后排空协调，末期残留低，无充分证据支持明显梗阻。",
+    "diagnostic_suggestion": "建议结合临床症状与随访观察；若其他检查无异常，可按常规复查。",
+    "mixed_bias": null
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "高"
+}
+
+【原最终回答（保留原模板）】
+右肾：机械性梗阻；右肾显影后持续高位滞留，利尿前后TAC及影像均无改善，符合固定性机械梗阻特征。
+左肾：正常肾脏；左肾达峰后自然下降，利尿后排空进一步加速且末期残留低，动态模式完全正常。
+图像TAC一致性：高
+置信度：高
+
+【增强版最终回答】
+病例：机械_5
+
+【右肾】
+最终分型：机械性梗阻
+置信度：高
+综合依据：右肾显影后持续高位滞留，利尿前后TAC及影像均无改善，符合固定性机械梗阻特征。
+判断标准和原则（100字内）：持续高位滞留，利尿后改善极少或无明显改善，末期残留高，更符合固定性受阻。
+诊断建议：建议结合解剖影像、肾功能和临床症状尽快评估固定性梗阻可能，必要时转泌尿外科。
+
+【左肾】
+最终分型：正常肾脏
+置信度：高
+综合依据：左肾达峰后自然下降，利尿后排空进一步加速且末期残留低，动态模式完全正常。
+判断标准和原则（100字内）：整体显影、达峰与排泄接近生理过程，利尿前后排空协调，末期残留低，无充分证据支持明显梗阻。
+诊断建议：建议结合临床症状与随访观察；若其他检查无异常，可按常规复查。
+
+图像TAC一致性：高
+总体置信度：高
+
+【Stage4 标准医生诊断报告】
+检查名称：
+肾动态显像（99mTc-EC）
+
+影像所见：
+右肾早期显影及时，但放射性摄取后呈持续高位滞留状态。时间-放射性曲线（TAC）显示达峰时间延迟，利尿前曲线呈平台状或轻度上升趋势，未见自然排泄迹象。给予利尿剂干预后，右肾区域放射性分布及TAC均无明显下降改善，末期残留放射性极高，提示排泄通路存在固定性阻碍。左肾早期显影及时，形态轮廓清晰。TAC显示其中期达峰，随后呈现自然下降趋势。利尿后，左肾排空进一步加速，曲线迅速降至低位，末期影像清晰，残留放射性低，整体动态过程符合生理性排泄特征。双肾图像表现与TAC变化高度一致。
+
+影像分析：
+本例双肾动态显像模式差异显著。右肾表现为典型的“持续高位滞留”图形，利尿试验阴性，即利尿后无有效排空改善，强烈提示存在机械性梗阻而非单纯的功能性扩张或尿液淤积。左肾各时相表现均在正常范围内，显影、达峰及排泄过程协调，利尿反应良好，排除梗阻可能。整体图像质量佳，数据置信度高，右侧病变特征明确。
+
+诊断意见：
+1. 右肾：符合机械性梗阻改变。
+2. 左肾：肾功能及排泄动态大致正常。
+
+临床建议：
+鉴于右肾呈现明确的机械性梗阻特征，建议结合泌尿系CTU、超声等解剖影像学检查，进一步明确梗阻部位及病因（如结石、狭窄或占位等）。请结合患者临床症状及血清肌酐、肾小球滤过率等肾功能指标进行综合评估。必要时请泌尿外科会诊，以制定后续治疗方案。左肾目前未见异常，建议常规随访观察。

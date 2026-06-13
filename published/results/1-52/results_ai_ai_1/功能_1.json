@@ -1,0 +1,72 @@
+{
+  "case_name": "功能_1",
+  "stage1_raw": "```json\n{\n  \"right_kidney\": {\n    \"early_visualization\": \"及时\",\n    \"peak_timing\": \"晚期达峰\",\n    \"pre_diuretic_trend\": \"基本平台或轻度滞留\",\n    \"post_diuretic_response\": \"明显持续改善\",\n    \"late_phase_retention\": \"低\",\n    \"overall_pattern\": \"排空延迟但可改善\",\n    \"reasoning_focus\": \"显影及时，但皮质摄取缓慢，达峰晚（约80帧）。利尿前呈平台状，未见自然下降。利尿后曲线显著下降，影像排空顺畅，末期残留低，符合功能性改变。\"\n  },\n  \"left_kidney\": {\n    \"early_visualization\": \"及时\",\n    \"peak_timing\": \"晚期达峰\",\n    \"pre_diuretic_trend\": \"基本平台或轻度滞留\",\n    \"post_diuretic_response\": \"明显持续改善\",\n    \"late_phase_retention\": \"低\",\n    \"overall_pattern\": \"排空延迟但可改善\",\n    \"reasoning_focus\": \"显影及时，肾实质浓聚慢，达峰晚（约83帧）。利尿前高位平台滞留。给予利尿剂后TAC迅速下降，影像显示排泄通畅，末期无残留，提示功能性梗阻。\"\n  },\n  \"image_tac_consistency\": \"高\",\n  \"confidence\": \"高\"\n}\n```",
+  "stage1_validated": {
+    "right_kidney": {
+      "early_visualization": "及时",
+      "peak_timing": "晚期达峰",
+      "pre_diuretic_trend": "基本平台或轻度滞留",
+      "post_diuretic_response": "明显持续改善",
+      "late_phase_retention": "低",
+      "overall_pattern": "排空延迟但可改善",
+      "reasoning_focus": "显影及时，但皮质摄取缓慢，达峰晚（约80帧）。利尿前呈平台状，未见自然下降。利尿后曲线显著下降，影像排空顺畅，末期残留低"
+    },
+    "left_kidney": {
+      "early_visualization": "及时",
+      "peak_timing": "晚期达峰",
+      "pre_diuretic_trend": "基本平台或轻度滞留",
+      "post_diuretic_response": "明显持续改善",
+      "late_phase_retention": "低",
+      "overall_pattern": "排空延迟但可改善",
+      "reasoning_focus": "显影及时，肾实质浓聚慢，达峰晚（约83帧）。利尿前高位平台滞留。给予利尿剂后TAC迅速下降，影像显示排泄通畅，末期无残留"
+    },
+    "image_tac_consistency": "高",
+    "confidence": "高"
+  },
+  "stage2_raw": "{\n  \"right_kidney\": {\n    \"final_label\": \"功能性梗阻\",\n    \"confidence\": \"高\",\n    \"reasoning\": \"虽达峰晚且利尿前滞留，但利尿后曲线显著下降、排空顺畅且末期残留低，符合非机械性排泄延迟特征。\"\n  },\n  \"left_kidney\": {\n    \"final_label\": \"功能性梗阻\",\n    \"confidence\": \"高\",\n    \"reasoning\": \"显影及时但摄取慢，利尿前高位平台，利尿后TAC迅速下降且无残留，证实为可改善的功能性排空障碍。\"\n  },\n  \"image_tac_consistency\": \"高\",\n  \"overall_confidence\": \"高\"\n}",
+  "stage2_validated": {
+    "right_kidney": {
+      "final_label": "功能性梗阻",
+      "confidence": "高",
+      "reasoning": "虽达峰晚且利尿前滞留，但利尿后曲线显著下降、排空顺畅且末期残留低，符合非机械性排泄延迟特征。"
+    },
+    "left_kidney": {
+      "final_label": "功能性梗阻",
+      "confidence": "高",
+      "reasoning": "显影及时但摄取慢，利尿前高位平台，利尿后TAC迅速下降且无残留，证实为可改善的功能性排空障碍。"
+    },
+    "image_tac_consistency": "高",
+    "overall_confidence": "高"
+  },
+  "stage3_mixed_bias_raw": {
+    "right_kidney": "",
+    "left_kidney": ""
+  },
+  "stage3_mixed_bias_validated": {
+    "right_kidney": null,
+    "left_kidney": null
+  },
+  "augmented_summary": {
+    "right_kidney": {
+      "final_label": "功能性梗阻",
+      "confidence": "高",
+      "reasoning": "虽达峰晚且利尿前滞留，但利尿后曲线显著下降、排空顺畅且末期残留低，符合非机械性排泄延迟特征。",
+      "judgment_standard": "以排泄延迟但可改善为主，利尿后下降明确，提示排空受影响，但不支持固定性重度受阻。",
+      "diagnostic_suggestion": "建议结合病史、超声或其他解剖影像综合评估，并观察随访与保守处理反应。",
+      "mixed_bias": null
+    },
+    "left_kidney": {
+      "final_label": "功能性梗阻",
+      "confidence": "高",
+      "reasoning": "显影及时但摄取慢，利尿前高位平台，利尿后TAC迅速下降且无残留，证实为可改善的功能性排空障碍。",
+      "judgment_standard": "以排泄延迟但可改善为主，利尿后下降明确，提示排空受影响，但不支持固定性重度受阻。",
+      "diagnostic_suggestion": "建议结合病史、超声或其他解剖影像综合评估，并观察随访与保守处理反应。",
+      "mixed_bias": null
+    },
+    "image_tac_consistency": "高",
+    "overall_confidence": "高"
+  },
+  "original_final_report": "右肾：功能性梗阻；虽达峰晚且利尿前滞留，但利尿后曲线显著下降、排空顺畅且末期残留低，符合非机械性排泄延迟特征。\n左肾：功能性梗阻；显影及时但摄取慢，利尿前高位平台，利尿后TAC迅速下降且无残留，证实为可改善的功能性排空障碍。\n图像TAC一致性：高\n置信度：高",
+  "enhanced_final_report": "病例：功能_1\n\n【右肾】\n最终分型：功能性梗阻\n置信度：高\n综合依据：虽达峰晚且利尿前滞留，但利尿后曲线显著下降、排空顺畅且末期残留低，符合非机械性排泄延迟特征。\n判断标准和原则（100字内）：以排泄延迟但可改善为主，利尿后下降明确，提示排空受影响，但不支持固定性重度受阻。\n诊断建议：建议结合病史、超声或其他解剖影像综合评估，并观察随访与保守处理反应。\n\n【左肾】\n最终分型：功能性梗阻\n置信度：高\n综合依据：显影及时但摄取慢，利尿前高位平台，利尿后TAC迅速下降且无残留，证实为可改善的功能性排空障碍。\n判断标准和原则（100字内）：以排泄延迟但可改善为主，利尿后下降明确，提示排空受影响，但不支持固定性重度受阻。\n诊断建议：建议结合病史、超声或其他解剖影像综合评估，并观察随访与保守处理反应。\n\n图像TAC一致性：高\n总体置信度：高",
+  "stage4_doctor_report": "检查名称：\n肾动态显像（99mTc-EC）\n\n影像所见：\n双肾血流灌注相显影及时，形态位置正常。功能相显示双肾皮质摄取放射性药物速度稍缓，右肾约80帧、左肾约83帧达峰值。利尿前阶段，双肾时间-放射性曲线（TAC）均呈高位平台状或轻度滞留趋势，未见自然下降。静脉注射利尿剂后，双肾TAC均出现显著且持续的下降，排泄段曲线改善明显。延迟显像期，双肾集合系统及肾盂区域放射性残留低，影像显示排泄通畅。图像表现与TAC变化具有高度一致性。\n\n影像分析：\n本例双肾动态显像呈现相似的功能改变模式。虽然双肾均表现为达峰延迟及利尿前的排泄滞留，提示存在一定程度的尿流动力学障碍，但关键在于对利尿试验的反应良好。利尿后曲线迅速下降且末期无显著残留，证实这种排泄延迟并非由固定的机械性梗阻引起，而是符合功能性排空障碍的特征。双肾病变程度及性质基本对称，图像与数据吻合度高，诊断置信度高。\n\n诊断意见：\n1. 右肾：功能性梗阻（非机械性排泄延迟）。\n2. 左肾：功能性梗阻（非机械性排泄延迟）。\n\n临床建议：\n目前影像学证据支持双肾为功能性排空障碍，不支持重度固定性机械梗阻。建议结合患者临床症状、既往病史以及泌尿系超声或CTU等解剖学影像资料进行综合评估。若患者无明显腰痛、感染或肾功能受损表现，可考虑保守治疗并定期随访观察；若症状持续或加重，请泌尿外科进一步诊治。"
+}

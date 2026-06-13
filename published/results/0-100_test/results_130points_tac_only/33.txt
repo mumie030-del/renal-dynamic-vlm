@@ -1,0 +1,82 @@
+【Stage1 原始输出】
+```json
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "中",
+    "overall_pattern": "排空延迟但可改善",
+    "reasoning_focus": "利尿前曲线持续上升无自然下降，峰值位于第90帧（利尿时相），利尿后出现显著且持续的下降趋势，末期残留中等。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "几乎无明显改善",
+    "late_phase_retention": "高",
+    "overall_pattern": "持续高位滞留",
+    "reasoning_focus": "利尿前持续上升，利尿后曲线呈平台状，未见有效下降，末期放射性浓度维持极高水平，提示固定性受阻。"
+  },
+  "confidence": "高"
+}
+```
+
+【Stage1 校验后结构化证据】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "中",
+    "overall_pattern": "排空延迟但可改善",
+    "reasoning_focus": "利尿前曲线持续上升无自然下降，峰值位于第90帧（利尿时相），利尿后出现显著且持续的下降趋势，末期残留中等。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "几乎无明显改善",
+    "late_phase_retention": "高",
+    "overall_pattern": "持续高位滞留",
+    "reasoning_focus": "利尿前持续上升，利尿后曲线呈平台状，未见有效下降，末期放射性浓度维持极高水平，提示固定性受阻。"
+  },
+  "confidence": "高"
+}
+
+【Stage2 原始输出】
+{
+  "right_kidney": {
+    "final_label": "功能性梗阻",
+    "confidence": "高",
+    "reasoning": "利尿前积聚，但利尿后出现显著且持续的下降趋势，证实排空延迟但非固定性受阻，符合功能性改变特征。"
+  },
+  "left_kidney": {
+    "final_label": "机械性梗阻",
+    "confidence": "高",
+    "reasoning": "利尿后曲线呈平台状无有效下降，末期放射性维持极高水平，提示存在固定性受阻，符合机械性梗阻特征。"
+  },
+  "overall_confidence": "高"
+}
+
+【Stage2 校验后最终分型】
+{
+  "right_kidney": {
+    "final_label": "功能性梗阻",
+    "confidence": "高",
+    "reasoning": "利尿前积聚，但利尿后出现显著且持续的下降趋势，证实排空延迟但非固定性受阻，符合功能性改变特征。"
+  },
+  "left_kidney": {
+    "final_label": "机械性梗阻",
+    "confidence": "高",
+    "reasoning": "利尿后曲线呈平台状无有效下降，末期放射性维持极高水平，提示存在固定性受阻，符合机械性梗阻特征。"
+  },
+  "overall_confidence": "高"
+}
+
+【最终回答】
+右肾：功能性梗阻；利尿前积聚，但利尿后出现显著且持续的下降趋势，证实排空延迟但非固定性受阻，符合功能性改变特征。
+左肾：机械性梗阻；利尿后曲线呈平台状无有效下降，末期放射性维持极高水平，提示存在固定性受阻，符合机械性梗阻特征。
+置信度：高

@@ -1,0 +1,82 @@
+【Stage1 原始输出】
+```json
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "基本平台或轻度滞留",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "中",
+    "overall_pattern": "介于可改善与持续滞留之间",
+    "reasoning_focus": "右肾显影及时，中期达峰后呈平台状。利尿后可见放射性浓度下降及排空趋势，但幅度有限，末期仍有中度残留，未恢复至完全协调排空。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "几乎无明显改善",
+    "late_phase_retention": "高",
+    "overall_pattern": "持续高位滞留",
+    "reasoning_focus": "左肾显影后放射性持续积聚，达峰晚且呈进行性上升。利尿后未见有效排空改善，集合系统持续高位浓聚，末期残留极高，符合机械性梗阻特征。"
+  },
+  "confidence": "高"
+}
+```
+
+【Stage1 校验后结构化证据】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "基本平台或轻度滞留",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "中",
+    "overall_pattern": "介于可改善与持续滞留之间",
+    "reasoning_focus": "右肾显影及时，中期达峰后呈平台状。利尿后可见放射性浓度下降及排空趋势，但幅度有限，末期仍有中度残留，未恢复至完全协调排空"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "几乎无明显改善",
+    "late_phase_retention": "高",
+    "overall_pattern": "持续高位滞留",
+    "reasoning_focus": "左肾显影后放射性持续积聚，达峰晚且呈进行性上升。利尿后未见有效排空改善，集合系统持续高位浓聚，末期残留极高，符合机械性梗"
+  },
+  "confidence": "高"
+}
+
+【Stage2 原始输出】
+{
+  "right_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "高",
+    "reasoning": "利尿后排空改善不充分且末期仍有中度残留，介于可改善与持续滞留之间，提示非单纯功能性延迟亦非完全机械性固定梗阻。"
+  },
+  "left_kidney": {
+    "final_label": "机械性梗阻",
+    "confidence": "高",
+    "reasoning": "放射性持续积聚、晚期达峰，利尿后无有效排空改善且末期高位滞留，符合固定性机械性梗阻特征。"
+  },
+  "overall_confidence": "高"
+}
+
+【Stage2 校验后最终分型】
+{
+  "right_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "高",
+    "reasoning": "利尿后排空改善不充分且末期仍有中度残留，介于可改善与持续滞留之间，提示非单纯功能性延迟亦非完全机械性固定梗阻。"
+  },
+  "left_kidney": {
+    "final_label": "机械性梗阻",
+    "confidence": "高",
+    "reasoning": "放射性持续积聚、晚期达峰，利尿后无有效排空改善且末期高位滞留，符合固定性机械性梗阻特征。"
+  },
+  "overall_confidence": "高"
+}
+
+【最终回答】
+右肾：混合性梗阻；利尿后排空改善不充分且末期仍有中度残留，介于可改善与持续滞留之间，提示非单纯功能性延迟亦非完全机械性固定梗阻。
+左肾：机械性梗阻；放射性持续积聚、晚期达峰，利尿后无有效排空改善且末期高位滞留，符合固定性机械性梗阻特征。
+置信度：高

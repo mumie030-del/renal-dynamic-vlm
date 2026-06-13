@@ -1,0 +1,82 @@
+【Stage1 原始输出】
+```json
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "整体排空协调",
+    "reasoning_focus": "右肾显影及时，中期达峰后呈自然下降趋势，利尿后排空顺畅，末期残留极低，符合正常生理排泄模式。"
+  },
+  "left_kidney": {
+    "early_visualization": "轻度延迟",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "基本平台或轻度滞留",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "中",
+    "overall_pattern": "介于可改善与持续滞留之间",
+    "reasoning_focus": "左肾显影稍晚，达峰后呈平台状滞留；利尿后可见放射性浓度下降（有改善），但末期仍有明确中度残留，排空不彻底。"
+  },
+  "confidence": "高"
+}
+```
+
+【Stage1 校验后结构化证据】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "整体排空协调",
+    "reasoning_focus": "右肾显影及时，中期达峰后呈自然下降趋势，利尿后排空顺畅，末期残留极低，符合正常生理排泄模式。"
+  },
+  "left_kidney": {
+    "early_visualization": "轻度延迟",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "基本平台或轻度滞留",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "中",
+    "overall_pattern": "介于可改善与持续滞留之间",
+    "reasoning_focus": "左肾显影稍晚，达峰后呈平台状滞留；利尿后可见放射性浓度下降（有改善），但末期仍有明确中度残留，排空不彻底。"
+  },
+  "confidence": "高"
+}
+
+【Stage2 原始输出】
+{
+  "right_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "显影及时，达峰后自然下降，利尿后排空顺畅且末期残留极低，符合正常生理排泄模式。"
+  },
+  "left_kidney": {
+    "final_label": "功能性梗阻",
+    "confidence": "高",
+    "reasoning": "显影延迟伴平台状滞留，利尿后有改善但排空不彻底，提示存在排泄延迟但非固定性完全梗阻。"
+  },
+  "overall_confidence": "高"
+}
+
+【Stage2 校验后最终分型】
+{
+  "right_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "显影及时，达峰后自然下降，利尿后排空顺畅且末期残留极低，符合正常生理排泄模式。"
+  },
+  "left_kidney": {
+    "final_label": "功能性梗阻",
+    "confidence": "高",
+    "reasoning": "显影延迟伴平台状滞留，利尿后有改善但排空不彻底，提示存在排泄延迟但非固定性完全梗阻。"
+  },
+  "overall_confidence": "高"
+}
+
+【最终回答】
+右肾：正常肾脏；显影及时，达峰后自然下降，利尿后排空顺畅且末期残留极低，符合正常生理排泄模式。
+左肾：功能性梗阻；显影延迟伴平台状滞留，利尿后有改善但排空不彻底，提示存在排泄延迟但非固定性完全梗阻。
+置信度：高

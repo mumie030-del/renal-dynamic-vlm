@@ -1,0 +1,40 @@
+{
+  "case_name": "机械_11",
+  "stage1_raw": "```json\n{\n  \"right_kidney\": {\n    \"early_visualization\": \"及时\",\n    \"peak_timing\": \"晚期达峰\",\n    \"pre_diuretic_trend\": \"持续上升或进行性积聚\",\n    \"post_diuretic_response\": \"几乎无明显改善\",\n    \"late_phase_retention\": \"高\",\n    \"overall_pattern\": \"持续高位滞留\",\n    \"reasoning_focus\": \"曲线呈持续上升型，利尿后无下降反应，末期放射性浓度维持极高水平（0.9377），提示严重机械性梗阻。\"\n  },\n  \"left_kidney\": {\n    \"early_visualization\": \"及时\",\n    \"peak_timing\": \"中期达峰\",\n    \"pre_diuretic_trend\": \"基本平台或轻度滞留\",\n    \"post_diuretic_response\": \"明显持续改善\",\n    \"late_phase_retention\": \"低\",\n    \"overall_pattern\": \"排空延迟但可改善\",\n    \"reasoning_focus\": \"中期达峰伴排泄段延缓，利尿后曲线迅速大幅下降，末期残留极低（0.1454），符合功能性梗阻特征。\"\n  },\n  \"confidence\": \"高\"\n}\n```",
+  "stage1_validated": {
+    "right_kidney": {
+      "early_visualization": "及时",
+      "peak_timing": "晚期达峰",
+      "pre_diuretic_trend": "持续上升或进行性积聚",
+      "post_diuretic_response": "几乎无明显改善",
+      "late_phase_retention": "高",
+      "overall_pattern": "持续高位滞留",
+      "reasoning_focus": "曲线呈持续上升型，利尿后无下降反应，末期放射性浓度维持极高水平（0.9377），提示严重机械性梗阻。"
+    },
+    "left_kidney": {
+      "early_visualization": "及时",
+      "peak_timing": "中期达峰",
+      "pre_diuretic_trend": "基本平台或轻度滞留",
+      "post_diuretic_response": "明显持续改善",
+      "late_phase_retention": "低",
+      "overall_pattern": "排空延迟但可改善",
+      "reasoning_focus": "中期达峰伴排泄段延缓，利尿后曲线迅速大幅下降，末期残留极低（0.1454），符合功能性梗阻特征。"
+    },
+    "confidence": "高"
+  },
+  "stage2_raw": "{\n  \"right_kidney\": {\n    \"final_label\": \"机械性梗阻\",\n    \"confidence\": \"高\",\n    \"reasoning\": \"曲线持续上升，利尿后无改善且末期高滞留，符合固定性严重受阻特征。\"\n  },\n  \"left_kidney\": {\n    \"final_label\": \"功能性梗阻\",\n    \"confidence\": \"高\",\n    \"reasoning\": \"虽排泄延缓，但利尿后迅速改善且末期残留低，提示非固定性受阻。\"\n  },\n  \"overall_confidence\": \"高\"\n}",
+  "stage2_validated": {
+    "right_kidney": {
+      "final_label": "机械性梗阻",
+      "confidence": "高",
+      "reasoning": "曲线持续上升，利尿后无改善且末期高滞留，符合固定性严重受阻特征。"
+    },
+    "left_kidney": {
+      "final_label": "功能性梗阻",
+      "confidence": "高",
+      "reasoning": "虽排泄延缓，但利尿后迅速改善且末期残留低，提示非固定性受阻。"
+    },
+    "overall_confidence": "高"
+  },
+  "final_report": "右肾：机械性梗阻；曲线持续上升，利尿后无改善且末期高滞留，符合固定性严重受阻特征。\n左肾：功能性梗阻；虽排泄延缓，但利尿后迅速改善且末期残留低，提示非固定性受阻。\n置信度：高"
+}

@@ -1,0 +1,82 @@
+【Stage1 原始输出】
+```json
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "高",
+    "overall_pattern": "介于可改善与持续滞留之间",
+    "reasoning_focus": "达峰极晚（91帧），利尿前持续积聚，利尿后虽有下降但幅度不足，末期残留仍高达0.72，排空不彻底。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "早期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "整体排空协调",
+    "reasoning_focus": "达峰早（48帧），利尿前已自然下降，利尿后进一步顺畅排空，末期残留极低（0.15），符合正常生理排泄模式。"
+  },
+  "confidence": "高"
+}
+```
+
+【Stage1 校验后结构化证据】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "高",
+    "overall_pattern": "介于可改善与持续滞留之间",
+    "reasoning_focus": "达峰极晚（91帧），利尿前持续积聚，利尿后虽有下降但幅度不足，末期残留仍高达0.72，排空不彻底。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "早期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "整体排空协调",
+    "reasoning_focus": "达峰早（48帧），利尿前已自然下降，利尿后进一步顺畅排空，末期残留极低（0.15），符合正常生理排泄模式。"
+  },
+  "confidence": "高"
+}
+
+【Stage2 原始输出】
+{
+  "right_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "高",
+    "reasoning": "达峰极晚且利尿前持续积聚，虽利尿后有改善但排空不充分、末期残留高，介于功能性与机械性之间。"
+  },
+  "left_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "早期达峰，利尿前已自然下降，利尿后排空顺畅且末期残留极低，符合正常生理排泄模式。"
+  },
+  "overall_confidence": "高"
+}
+
+【Stage2 校验后最终分型】
+{
+  "right_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "高",
+    "reasoning": "达峰极晚且利尿前持续积聚，虽利尿后有改善但排空不充分、末期残留高，介于功能性与机械性之间。"
+  },
+  "left_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "早期达峰，利尿前已自然下降，利尿后排空顺畅且末期残留极低，符合正常生理排泄模式。"
+  },
+  "overall_confidence": "高"
+}
+
+【最终回答】
+右肾：混合性梗阻；达峰极晚且利尿前持续积聚，虽利尿后有改善但排空不充分、末期残留高，介于功能性与机械性之间。
+左肾：正常肾脏；早期达峰，利尿前已自然下降，利尿后排空顺畅且末期残留极低，符合正常生理排泄模式。
+置信度：高

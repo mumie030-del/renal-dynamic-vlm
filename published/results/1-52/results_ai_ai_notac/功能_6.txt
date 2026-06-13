@@ -1,0 +1,82 @@
+【Stage1 原始输出】
+```json
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "基本平台或轻度滞留",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "排空延迟但可改善",
+    "reasoning_focus": "右肾显影及时，中期达峰后呈平台状滞留，利尿后放射性浓度明显下降并持续排空，末期残留低，符合功能性梗阻特征。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "基本平台或轻度滞留",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "排空延迟但可改善",
+    "reasoning_focus": "左肾显影及时，峰值后出现轻度滞留，利尿后见明确且持续的排空改善，末期无显著残留，整体表现为排空延迟但功能尚可。"
+  },
+  "confidence": "高"
+}
+```
+
+【Stage1 校验后结构化证据】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "基本平台或轻度滞留",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "排空延迟但可改善",
+    "reasoning_focus": "右肾显影及时，中期达峰后呈平台状滞留，利尿后放射性浓度明显下降并持续排空，末期残留低，符合功能性梗阻特征。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "基本平台或轻度滞留",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "排空延迟但可改善",
+    "reasoning_focus": "左肾显影及时，峰值后出现轻度滞留，利尿后见明确且持续的排空改善，末期无显著残留，整体表现为排空延迟但功能尚可。"
+  },
+  "confidence": "高"
+}
+
+【Stage2 原始输出】
+{
+  "right_kidney": {
+    "final_label": "功能性梗阻",
+    "confidence": "高",
+    "reasoning": "显影及时但利尿前滞留，利尿后放射性浓度明显下降且末期残留低，证实排空延迟但非固定性机械受阻。"
+  },
+  "left_kidney": {
+    "final_label": "功能性梗阻",
+    "confidence": "高",
+    "reasoning": "达峰后轻度滞留，但利尿激发后排空改善明确且持续，末期无显著残留，符合排泄延迟但功能可逆的特征。"
+  },
+  "overall_confidence": "高"
+}
+
+【Stage2 校验后最终分型】
+{
+  "right_kidney": {
+    "final_label": "功能性梗阻",
+    "confidence": "高",
+    "reasoning": "显影及时但利尿前滞留，利尿后放射性浓度明显下降且末期残留低，证实排空延迟但非固定性机械受阻。"
+  },
+  "left_kidney": {
+    "final_label": "功能性梗阻",
+    "confidence": "高",
+    "reasoning": "达峰后轻度滞留，但利尿激发后排空改善明确且持续，末期无显著残留，符合排泄延迟但功能可逆的特征。"
+  },
+  "overall_confidence": "高"
+}
+
+【最终回答】
+右肾：功能性梗阻；显影及时但利尿前滞留，利尿后放射性浓度明显下降且末期残留低，证实排空延迟但非固定性机械受阻。
+左肾：功能性梗阻；达峰后轻度滞留，但利尿激发后排空改善明确且持续，末期无显著残留，符合排泄延迟但功能可逆的特征。
+置信度：高

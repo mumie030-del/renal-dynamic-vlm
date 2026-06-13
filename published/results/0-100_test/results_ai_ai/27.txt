@@ -1,0 +1,87 @@
+【Stage1 原始输出】
+```json
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "几乎无明显改善",
+    "late_phase_retention": "高",
+    "overall_pattern": "持续高位滞留",
+    "reasoning_focus": "右肾显影后放射性持续积聚，未见明显排空。利尿后影像无改善，TAC曲线呈持续上升型且末期维持极高水平，符合机械性梗阻特征。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "低",
+    "overall_pattern": "整体排空协调",
+    "reasoning_focus": "左肾早期显影，约40帧达峰后开始自然下降。利尿后TAC继续下降，末期残留低，虽下降速度略缓但整体排空趋势协调，未见明确梗阻征象。"
+  },
+  "image_tac_consistency": "高",
+  "confidence": "高"
+}
+```
+
+【Stage1 校验后结构化证据】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "几乎无明显改善",
+    "late_phase_retention": "高",
+    "overall_pattern": "持续高位滞留",
+    "reasoning_focus": "右肾显影后放射性持续积聚，未见明显排空。利尿后影像无改善，TAC曲线呈持续上升型且末期维持极高水平，符合机械性梗阻特征。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "低",
+    "overall_pattern": "整体排空协调",
+    "reasoning_focus": "左肾早期显影，约40帧达峰后开始自然下降。利尿后TAC继续下降，末期残留低，虽下降速度略缓但整体排空趋势协调，未见明确梗"
+  },
+  "image_tac_consistency": "高",
+  "confidence": "高"
+}
+
+【Stage2 原始输出】
+{
+  "right_kidney": {
+    "final_label": "机械性梗阻",
+    "confidence": "高",
+    "reasoning": "右肾显影后放射性持续积聚，利尿后无改善且末期高滞留，符合固定性机械梗阻特征。"
+  },
+  "left_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "左肾自然排空趋势良好，利尿后进一步改善且末期残留低，整体动力学符合生理性排泄。"
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "高"
+}
+
+【Stage2 校验后最终分型】
+{
+  "right_kidney": {
+    "final_label": "机械性梗阻",
+    "confidence": "高",
+    "reasoning": "右肾显影后放射性持续积聚，利尿后无改善且末期高滞留，符合固定性机械梗阻特征。"
+  },
+  "left_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "左肾自然排空趋势良好，利尿后进一步改善且末期残留低，整体动力学符合生理性排泄。"
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "高"
+}
+
+【最终回答】
+右肾：机械性梗阻；右肾显影后放射性持续积聚，利尿后无改善且末期高滞留，符合固定性机械梗阻特征。
+左肾：正常肾脏；左肾自然排空趋势良好，利尿后进一步改善且末期残留低，整体动力学符合生理性排泄。
+图像TAC一致性：高
+置信度：高

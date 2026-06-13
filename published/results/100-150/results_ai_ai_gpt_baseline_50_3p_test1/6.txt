@@ -1,0 +1,95 @@
+【Stage1 原始输出】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_drop_presence": "明确连续下降",
+    "post_emptying_sufficiency": "排空较充分",
+    "collecting_system_change": "范围明显缩小",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "late_retention_relative_to_diuretic": "明显低于利尿时相",
+    "overall_dynamic_pattern": "排空延迟但后期改善充分",
+    "reasoning_focus": "中期达峰，利尿前已下降，利尿后连续减低，末期残留低。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_drop_presence": "无明确下降或继续上升",
+    "post_emptying_sufficiency": "基本未排空",
+    "collecting_system_change": "范围无明显缩小",
+    "post_diuretic_response": "几乎无明显改善",
+    "late_phase_retention": "高",
+    "late_retention_relative_to_diuretic": "接近或高于利尿时相",
+    "overall_dynamic_pattern": "持续滞留无实质改善",
+    "reasoning_focus": "持续上升至晚期，利尿后无可信下降，末期仍高残留。"
+  },
+  "image_tac_consistency": "高",
+  "confidence": "高"
+}
+
+【Stage1 校验后结构化证据】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_drop_presence": "明确连续下降",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_dynamic_pattern": "排空延迟但后期改善充分",
+    "reasoning_focus": "中期达峰，利尿前已下降，利尿后连续减低，末期残留低。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_drop_presence": "无明确下降或继续上升",
+    "post_diuretic_response": "几乎无明显改善",
+    "late_phase_retention": "高",
+    "overall_dynamic_pattern": "持续滞留无实质改善",
+    "reasoning_focus": "持续上升至晚期，利尿后无可信下降，末期仍高残留。"
+  },
+  "image_tac_consistency": "高",
+  "confidence": "高"
+}
+
+【Stage2 原始输出】
+{
+  "right_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "利尿前已自然下降，利尿后继续排空且末期残留低，整体排空通畅。"
+  },
+  "left_kidney": {
+    "final_label": "机械性梗阻",
+    "confidence": "高",
+    "reasoning": "持续积聚至晚期，利尿后无明显排空，末期高滞留，符合固定性受阻。"
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "高"
+}
+
+【Stage2 校验后最终分型】
+{
+  "right_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "利尿前已自然下降，利尿后继续排空且末期残留低，整体排空通畅。"
+  },
+  "left_kidney": {
+    "final_label": "机械性梗阻",
+    "confidence": "高",
+    "reasoning": "持续积聚至晚期，利尿后无明显排空，末期高滞留，符合固定性受阻。"
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "高"
+}
+
+【最终回答】
+右肾：正常肾脏；利尿前已自然下降，利尿后继续排空且末期残留低，整体排空通畅。
+左肾：机械性梗阻；持续积聚至晚期，利尿后无明显排空，末期高滞留，符合固定性受阻。
+图像TAC一致性：高
+置信度：高

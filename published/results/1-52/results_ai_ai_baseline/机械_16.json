@@ -1,0 +1,42 @@
+{
+  "case_name": "机械_16",
+  "stage1_raw": "```json\n{\n  \"right_kidney\": {\n    \"early_visualization\": \"及时\",\n    \"peak_timing\": \"晚期达峰\",\n    \"pre_diuretic_trend\": \"持续上升或进行性积聚\",\n    \"post_diuretic_response\": \"几乎无明显改善\",\n    \"late_phase_retention\": \"高\",\n    \"overall_pattern\": \"持续高位滞留\",\n    \"reasoning_focus\": \"右肾显影后放射性持续积聚，利尿前未见下降，利尿后肾盂区仍呈高密度团块状滞留，无排空迹象。\"\n  },\n  \"left_kidney\": {\n    \"early_visualization\": \"及时\",\n    \"peak_timing\": \"中期达峰\",\n    \"pre_diuretic_trend\": \"已开始自然下降\",\n    \"post_diuretic_response\": \"明显持续改善\",\n    \"late_phase_retention\": \"低\",\n    \"overall_pattern\": \"整体排空协调\",\n    \"reasoning_focus\": \"左肾中期达峰后自然下降，利尿后排空进一步加速，末期残留极少，符合正常排泄动力学特征。\"\n  },\n  \"image_tac_consistency\": \"高\",\n  \"confidence\": \"高\"\n}\n```",
+  "stage1_validated": {
+    "right_kidney": {
+      "early_visualization": "及时",
+      "peak_timing": "晚期达峰",
+      "pre_diuretic_trend": "持续上升或进行性积聚",
+      "post_diuretic_response": "几乎无明显改善",
+      "late_phase_retention": "高",
+      "overall_pattern": "持续高位滞留",
+      "reasoning_focus": "右肾显影后放射性持续积聚，利尿前未见下降，利尿后肾盂区仍呈高密度团块状滞留，无排空迹象。"
+    },
+    "left_kidney": {
+      "early_visualization": "及时",
+      "peak_timing": "中期达峰",
+      "pre_diuretic_trend": "已开始自然下降",
+      "post_diuretic_response": "明显持续改善",
+      "late_phase_retention": "低",
+      "overall_pattern": "整体排空协调",
+      "reasoning_focus": "左肾中期达峰后自然下降，利尿后排空进一步加速，末期残留极少，符合正常排泄动力学特征。"
+    },
+    "image_tac_consistency": "高",
+    "confidence": "高"
+  },
+  "stage2_raw": "{\n  \"right_kidney\": {\n    \"final_label\": \"机械性梗阻\",\n    \"confidence\": \"高\",\n    \"reasoning\": \"右肾显影后放射性持续积聚，利尿前后均无排空改善，呈高位滞留，符合固定性机械梗阻特征。\"\n  },\n  \"left_kidney\": {\n    \"final_label\": \"正常肾脏\",\n    \"confidence\": \"高\",\n    \"reasoning\": \"左肾达峰后自然下降，利尿后排空加速且末期残留极少，符合正常生理排泄动力学。\"\n  },\n  \"image_tac_consistency\": \"高\",\n  \"overall_confidence\": \"高\"\n}",
+  "stage2_validated": {
+    "right_kidney": {
+      "final_label": "机械性梗阻",
+      "confidence": "高",
+      "reasoning": "右肾显影后放射性持续积聚，利尿前后均无排空改善，呈高位滞留，符合固定性机械梗阻特征。"
+    },
+    "left_kidney": {
+      "final_label": "正常肾脏",
+      "confidence": "高",
+      "reasoning": "左肾达峰后自然下降，利尿后排空加速且末期残留极少，符合正常生理排泄动力学。"
+    },
+    "image_tac_consistency": "高",
+    "overall_confidence": "高"
+  },
+  "final_report": "右肾：机械性梗阻；右肾显影后放射性持续积聚，利尿前后均无排空改善，呈高位滞留，符合固定性机械梗阻特征。\n左肾：正常肾脏；左肾达峰后自然下降，利尿后排空加速且末期残留极少，符合正常生理排泄动力学。\n图像TAC一致性：高\n置信度：高"
+}

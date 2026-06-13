@@ -1,0 +1,82 @@
+{
+  "case_name": "混合_10",
+  "stage1_raw": "```json\n{\n  \"right_kidney\": {\n    \"early_visualization\": \"及时\",\n    \"peak_timing\": \"中期达峰\",\n    \"pre_diuretic_trend\": \"基本平台或轻度滞留\",\n    \"post_diuretic_response\": \"有一定改善但不充分\",\n    \"late_phase_retention\": \"高\",\n    \"overall_pattern\": \"介于可改善与持续滞留之间\",\n    \"reasoning_focus\": \"右肾显影及时，中期达峰后呈平台状。利尿后曲线虽有下降趋势（TAC降约0.4），但末期仍维持高位残留（>0.6），排空不彻底，符合混合性特征。\"\n  },\n  \"left_kidney\": {\n    \"early_visualization\": \"及时\",\n    \"peak_timing\": \"中期达峰\",\n    \"pre_diuretic_trend\": \"已开始自然下降\",\n    \"post_diuretic_response\": \"明显持续改善\",\n    \"late_phase_retention\": \"低\",\n    \"overall_pattern\": \"整体排空协调\",\n    \"reasoning_focus\": \"左肾显影及时，达峰后自然下降顺畅。利尿后进一步排空，末期无放射性残留，TAC降至低位，整体动态模式正常。\"\n  },\n  \"image_tac_consistency\": \"高\",\n  \"confidence\": \"高\"\n}\n```",
+  "stage1_validated": {
+    "right_kidney": {
+      "early_visualization": "及时",
+      "peak_timing": "中期达峰",
+      "pre_diuretic_trend": "基本平台或轻度滞留",
+      "post_diuretic_response": "有一定改善但不充分",
+      "late_phase_retention": "高",
+      "overall_pattern": "介于可改善与持续滞留之间",
+      "reasoning_focus": "右肾显影及时，中期达峰后呈平台状。利尿后曲线虽有下降趋势（TAC降约0.4），但末期仍维持高位残留（>0.6），排空不彻"
+    },
+    "left_kidney": {
+      "early_visualization": "及时",
+      "peak_timing": "中期达峰",
+      "pre_diuretic_trend": "已开始自然下降",
+      "post_diuretic_response": "明显持续改善",
+      "late_phase_retention": "低",
+      "overall_pattern": "整体排空协调",
+      "reasoning_focus": "左肾显影及时，达峰后自然下降顺畅。利尿后进一步排空，末期无放射性残留，TAC降至低位，整体动态模式正常。"
+    },
+    "image_tac_consistency": "高",
+    "confidence": "高"
+  },
+  "stage2_raw": "{\n  \"right_kidney\": {\n    \"final_label\": \"混合性梗阻\",\n    \"confidence\": \"高\",\n    \"reasoning\": \"利尿后虽有改善但末期残留仍高，排空不彻底，介于可改善与持续滞留之间，符合混合性特征。\"\n  },\n  \"left_kidney\": {\n    \"final_label\": \"正常肾脏\",\n    \"confidence\": \"高\",\n    \"reasoning\": \"显影及时，达峰后自然下降，利尿后排空顺畅且无残留，整体动态模式符合生理性排泄。\"\n  },\n  \"image_tac_consistency\": \"高\",\n  \"overall_confidence\": \"高\"\n}",
+  "stage2_validated": {
+    "right_kidney": {
+      "final_label": "混合性梗阻",
+      "confidence": "高",
+      "reasoning": "利尿后虽有改善但末期残留仍高，排空不彻底，介于可改善与持续滞留之间，符合混合性特征。"
+    },
+    "left_kidney": {
+      "final_label": "正常肾脏",
+      "confidence": "高",
+      "reasoning": "显影及时，达峰后自然下降，利尿后排空顺畅且无残留，整体动态模式符合生理性排泄。"
+    },
+    "image_tac_consistency": "高",
+    "overall_confidence": "高"
+  },
+  "stage3_mixed_bias_raw": {
+    "right_kidney": "{\n  \"bias_label\": \"偏机械性\",\n  \"mechanical_bias_score\": 0.75,\n  \"confidence\": \"高\",\n  \"reasoning\": \"利尿后曲线下降幅度有限且末期残留极高，排空反应不充分，提示存在显著的物理性梗阻因素。\"\n}",
+    "left_kidney": ""
+  },
+  "stage3_mixed_bias_validated": {
+    "right_kidney": {
+      "bias_label": "偏机械性",
+      "mechanical_bias_score": 0.75,
+      "confidence": "高",
+      "reasoning": "利尿后曲线下降幅度有限且末期残留极高，排空反应不充分，提示存在显著的物理性梗阻因素。"
+    },
+    "left_kidney": null
+  },
+  "augmented_summary": {
+    "right_kidney": {
+      "final_label": "混合性梗阻",
+      "confidence": "高",
+      "reasoning": "利尿后虽有改善但末期残留仍高，排空不彻底，介于可改善与持续滞留之间，符合混合性特征。",
+      "judgment_standard": "介于功能性与机械性之间，利尿后有改善但不充分，末期仍有残留，整体排空未恢复协调。",
+      "diagnostic_suggestion": "建议联合超声/CTU/MRU、实验室及临床症状综合判断，并重点评估机械性与功能性成分。",
+      "mixed_bias": {
+        "bias_label": "偏机械性",
+        "mechanical_bias_score": 0.75,
+        "confidence": "高",
+        "reasoning": "利尿后曲线下降幅度有限且末期残留极高，排空反应不充分，提示存在显著的物理性梗阻因素。"
+      }
+    },
+    "left_kidney": {
+      "final_label": "正常肾脏",
+      "confidence": "高",
+      "reasoning": "显影及时，达峰后自然下降，利尿后排空顺畅且无残留，整体动态模式符合生理性排泄。",
+      "judgment_standard": "整体显影、达峰与排泄接近生理过程，利尿前后排空协调，末期残留低，无充分证据支持明显梗阻。",
+      "diagnostic_suggestion": "建议结合临床症状与随访观察；若其他检查无异常，可按常规复查。",
+      "mixed_bias": null
+    },
+    "image_tac_consistency": "高",
+    "overall_confidence": "高"
+  },
+  "original_final_report": "右肾：混合性梗阻；利尿后虽有改善但末期残留仍高，排空不彻底，介于可改善与持续滞留之间，符合混合性特征。\n左肾：正常肾脏；显影及时，达峰后自然下降，利尿后排空顺畅且无残留，整体动态模式符合生理性排泄。\n图像TAC一致性：高\n置信度：高",
+  "enhanced_final_report": "病例：混合_10\n\n【右肾】\n最终分型：混合性梗阻\n置信度：高\n综合依据：利尿后虽有改善但末期残留仍高，排空不彻底，介于可改善与持续滞留之间，符合混合性特征。\n判断标准和原则（100字内）：介于功能性与机械性之间，利尿后有改善但不充分，末期仍有残留，整体排空未恢复协调。\n诊断建议：建议联合超声/CTU/MRU、实验室及临床症状综合判断，并重点评估机械性与功能性成分。\n梗阻偏向：偏机械性 (机械性偏向分数=0.75, 置信度=高)\n偏向依据：利尿后曲线下降幅度有限且末期残留极高，排空反应不充分，提示存在显著的物理性梗阻因素。\n偏向建议：更偏机械性成分，建议结合解剖影像与临床症状重点排查固定性受阻。\n\n【左肾】\n最终分型：正常肾脏\n置信度：高\n综合依据：显影及时，达峰后自然下降，利尿后排空顺畅且无残留，整体动态模式符合生理性排泄。\n判断标准和原则（100字内）：整体显影、达峰与排泄接近生理过程，利尿前后排空协调，末期残留低，无充分证据支持明显梗阻。\n诊断建议：建议结合临床症状与随访观察；若其他检查无异常，可按常规复查。\n\n图像TAC一致性：高\n总体置信度：高",
+  "stage4_doctor_report": "检查名称：\n肾动态显像（99mTc-EC）\n\n影像所见：\n右肾早期显影及时，放射性摄取正常，于中期达到峰值。利尿前时间-放射性曲线（TAC）呈平台状或轻度滞留趋势。给予利尿剂后，曲线虽有下降趋势，但排空反应不充分，末期仍维持较高水平的放射性残留，提示排泄受阻。左肾早期显影及时，形态完整，于中期达峰后曲线自然顺畅下降。利尿后见放射性进一步快速清除，末期无明显残留，整体动态排泄模式协调，符合生理性排泄特征。双肾图像与TAC曲线一致性高。\n\n影像分析：\n左肾灌注、功能及排泄各阶段表现均在正常范围内，未见明显梗阻征象。右肾虽在利尿后出现一定程度的改善，但鉴于其末期残留量高且排空不彻底，动态模式介于可改善与持续滞留之间，提示存在病理性改变。综合评估，右肾情况更符合混合性梗阻特征，且由于利尿后排空反应有限，物理性梗阻因素占主导地位。\n\n诊断意见：\n1. 右肾：混合性梗阻（偏机械性）。\n2. 左肾：正常肾脏。\n\n临床建议：\n右肾表现为偏机械性的混合性梗阻，建议结合泌尿系超声、CT尿路成像（CTU）或磁共振尿路成像（MRU）等解剖学影像资料，重点排查是否存在输尿管狭窄、结石或外压性病变等固定性梗阻因素。同时请结合患者临床症状及肾功能实验室检查结果进行综合评估，以制定后续治疗方案。左肾目前未见异常，建议常规随访观察。"
+}

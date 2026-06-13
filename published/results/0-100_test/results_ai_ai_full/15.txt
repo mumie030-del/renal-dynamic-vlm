@@ -1,0 +1,87 @@
+【Stage1 原始输出】
+```json
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "整体排空协调",
+    "reasoning_focus": "右肾显影及时，约54帧达峰后呈自然下降趋势。利尿后曲线进一步显著下降，末期残留极低，符合正常排泄动力学特征。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "基本平台或轻度滞留",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "排空延迟但可改善",
+    "reasoning_focus": "左肾显影及时，44帧达峰后出现短暂平台期（TAC验证），利尿后反应迅速且排空彻底，末期无残留，提示功能性改变或正常变异。"
+  },
+  "image_tac_consistency": "高",
+  "confidence": "高"
+}
+```
+
+【Stage1 校验后结构化证据】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "整体排空协调",
+    "reasoning_focus": "右肾显影及时，约54帧达峰后呈自然下降趋势。利尿后曲线进一步显著下降，末期残留极低，符合正常排泄动力学特征。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "基本平台或轻度滞留",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "排空延迟但可改善",
+    "reasoning_focus": "左肾显影及时，44帧达峰后出现短暂平台期（TAC验证），利尿后反应迅速且排空彻底，末期无残留，提示功能性改变或正常变异。"
+  },
+  "image_tac_consistency": "高",
+  "confidence": "高"
+}
+
+【Stage2 原始输出】
+{
+  "right_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "显影及时，达峰后自然下降，利尿后排空显著改善且无残留，符合正常生理排泄动力学。"
+  },
+  "left_kidney": {
+    "final_label": "功能性梗阻",
+    "confidence": "高",
+    "reasoning": "虽有利尿后明显改善及低残留，但利尿前存在平台期滞留，提示非完全正常的排泄延迟，符合功能性改变。"
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "高"
+}
+
+【Stage2 校验后最终分型】
+{
+  "right_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "显影及时，达峰后自然下降，利尿后排空显著改善且无残留，符合正常生理排泄动力学。"
+  },
+  "left_kidney": {
+    "final_label": "功能性梗阻",
+    "confidence": "高",
+    "reasoning": "虽有利尿后明显改善及低残留，但利尿前存在平台期滞留，提示非完全正常的排泄延迟，符合功能性改变。"
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "高"
+}
+
+【最终回答】
+右肾：正常肾脏；显影及时，达峰后自然下降，利尿后排空显著改善且无残留，符合正常生理排泄动力学。
+左肾：功能性梗阻；虽有利尿后明显改善及低残留，但利尿前存在平台期滞留，提示非完全正常的排泄延迟，符合功能性改变。
+图像TAC一致性：高
+置信度：高

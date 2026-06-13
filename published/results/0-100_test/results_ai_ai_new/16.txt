@@ -1,0 +1,87 @@
+【Stage1 原始输出】
+```json
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "中",
+    "overall_pattern": "排空延迟但可改善",
+    "reasoning_focus": "右肾显影及时，但皮质摄取缓慢，利尿前呈持续上升趋势（TAC峰值77帧）。利尿后影像及曲线均显示放射性明显下降，排空通畅，符合功能性梗阻特征。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "早期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "低",
+    "overall_pattern": "整体排空协调",
+    "reasoning_focus": "左肾显影及时，约40帧达峰后自然下降。利尿后虽无剧烈冲刷效应，但延续自然排空趋势，末期残留低，整体动态模式协调，视为正常。"
+  },
+  "image_tac_consistency": "高",
+  "confidence": "高"
+}
+```
+
+【Stage1 校验后结构化证据】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "中",
+    "overall_pattern": "排空延迟但可改善",
+    "reasoning_focus": "右肾显影及时，但皮质摄取缓慢，利尿前呈持续上升趋势（TAC峰值77帧）。利尿后影像及曲线均显示放射性明显下降，排空通畅，"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "早期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "低",
+    "overall_pattern": "整体排空协调",
+    "reasoning_focus": "左肾显影及时，约40帧达峰后自然下降。利尿后虽无剧烈冲刷效应，但延续自然排空趋势，末期残留低，整体动态模式协调，视为正常"
+  },
+  "image_tac_consistency": "高",
+  "confidence": "高"
+}
+
+【Stage2 原始输出】
+{
+  "right_kidney": {
+    "final_label": "功能性梗阻",
+    "confidence": "高",
+    "reasoning": "利尿前持续积聚，但利尿后影像及曲线均显示明显排空改善，符合非机械性固定受阻的排泄延迟特征。"
+  },
+  "left_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "早期达峰并自然下降，利尿后排空协调且末期残留低，整体动态符合生理性排泄过程，无梗阻证据。"
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "高"
+}
+
+【Stage2 校验后最终分型】
+{
+  "right_kidney": {
+    "final_label": "功能性梗阻",
+    "confidence": "高",
+    "reasoning": "利尿前持续积聚，但利尿后影像及曲线均显示明显排空改善，符合非机械性固定受阻的排泄延迟特征。"
+  },
+  "left_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "早期达峰并自然下降，利尿后排空协调且末期残留低，整体动态符合生理性排泄过程，无梗阻证据。"
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "高"
+}
+
+【最终回答】
+右肾：功能性梗阻；利尿前持续积聚，但利尿后影像及曲线均显示明显排空改善，符合非机械性固定受阻的排泄延迟特征。
+左肾：正常肾脏；早期达峰并自然下降，利尿后排空协调且末期残留低，整体动态符合生理性排泄过程，无梗阻证据。
+图像TAC一致性：高
+置信度：高

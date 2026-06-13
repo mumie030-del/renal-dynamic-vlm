@@ -1,0 +1,12 @@
+# 医学影像数据
+data/
+
+# Python
+__pycache__/
+.ipynb_checkpoints/
+
+# Claude Code 本地配置
+.claude/
+
+# 患者敏感信息
+results/第三批患者信息*.xlsx

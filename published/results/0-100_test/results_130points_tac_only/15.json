@@ -1,0 +1,40 @@
+{
+  "case_name": "15",
+  "stage1_raw": "```json\n{\n  \"right_kidney\": {\n    \"early_visualization\": \"及时\",\n    \"peak_timing\": \"中期达峰\",\n    \"pre_diuretic_trend\": \"已开始自然下降\",\n    \"post_diuretic_response\": \"明显持续改善\",\n    \"late_phase_retention\": \"低\",\n    \"overall_pattern\": \"整体排空协调\",\n    \"reasoning_focus\": \"第54帧达峰，利尿前已呈自然下降趋势；利尿后曲线持续平滑下降，幅度达0.4383，末期残留仅0.1723，排空顺畅。\"\n  },\n  \"left_kidney\": {\n    \"early_visualization\": \"及时\",\n    \"peak_timing\": \"早期达峰\",\n    \"pre_diuretic_trend\": \"基本平台或轻度滞留\",\n    \"post_diuretic_response\": \"明显持续改善\",\n    \"late_phase_retention\": \"低\",\n    \"overall_pattern\": \"排空延迟但可改善\",\n    \"reasoning_focus\": \"第44帧达峰，利尿前高位平台期较长（60-80帧）；利尿后出现显著且连续的下降（降幅0.5833），末期降至0.194，证实为功能性排泄延迟。\"\n  },\n  \"confidence\": \"高\"\n}\n```",
+  "stage1_validated": {
+    "right_kidney": {
+      "early_visualization": "及时",
+      "peak_timing": "中期达峰",
+      "pre_diuretic_trend": "已开始自然下降",
+      "post_diuretic_response": "明显持续改善",
+      "late_phase_retention": "低",
+      "overall_pattern": "整体排空协调",
+      "reasoning_focus": "第54帧达峰，利尿前已呈自然下降趋势；利尿后曲线持续平滑下降，幅度达0.4383，末期残留仅0.1723，排空顺畅。"
+    },
+    "left_kidney": {
+      "early_visualization": "及时",
+      "peak_timing": "早期达峰",
+      "pre_diuretic_trend": "基本平台或轻度滞留",
+      "post_diuretic_response": "明显持续改善",
+      "late_phase_retention": "低",
+      "overall_pattern": "排空延迟但可改善",
+      "reasoning_focus": "第44帧达峰，利尿前高位平台期较长（60-80帧）；利尿后出现显著且连续的下降（降幅0.5833），末期降至0.194，"
+    },
+    "confidence": "高"
+  },
+  "stage2_raw": "{\n  \"right_kidney\": {\n    \"final_label\": \"正常肾脏\",\n    \"confidence\": \"高\",\n    \"reasoning\": \"显影及时，利尿前已自然下降，利尿后排空顺畅且残留低，符合生理性排泄特征，无梗阻证据。\"\n  },\n  \"left_kidney\": {\n    \"final_label\": \"功能性梗阻\",\n    \"confidence\": \"高\",\n    \"reasoning\": \"虽早期达峰但利尿前呈平台滞留，利尿后显著改善且末期残留低，提示非机械性固定受阻，为排泄延迟。\"\n  },\n  \"overall_confidence\": \"高\"\n}",
+  "stage2_validated": {
+    "right_kidney": {
+      "final_label": "正常肾脏",
+      "confidence": "高",
+      "reasoning": "显影及时，利尿前已自然下降，利尿后排空顺畅且残留低，符合生理性排泄特征，无梗阻证据。"
+    },
+    "left_kidney": {
+      "final_label": "功能性梗阻",
+      "confidence": "高",
+      "reasoning": "虽早期达峰但利尿前呈平台滞留，利尿后显著改善且末期残留低，提示非机械性固定受阻，为排泄延迟。"
+    },
+    "overall_confidence": "高"
+  },
+  "final_report": "右肾：正常肾脏；显影及时，利尿前已自然下降，利尿后排空顺畅且残留低，符合生理性排泄特征，无梗阻证据。\n左肾：功能性梗阻；虽早期达峰但利尿前呈平台滞留，利尿后显著改善且末期残留低，提示非机械性固定受阻，为排泄延迟。\n置信度：高"
+}

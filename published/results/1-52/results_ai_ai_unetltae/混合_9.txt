@@ -1,0 +1,87 @@
+【Stage1 原始输出】
+```json
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "整体排空协调",
+    "reasoning_focus": "右肾显影及时，约37帧达峰后呈自然下降趋势。利尿后曲线进一步显著下降，末期残留低，符合正常排泄模式。"
+  },
+  "left_kidney": {
+    "early_visualization": "轻度延迟",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "高",
+    "overall_pattern": "介于可改善与持续滞留之间",
+    "reasoning_focus": "左肾显影稍迟，利尿前持续积聚至96帧才达峰。利尿后虽有下降但幅度不足，末期仍存高位放射性，提示混合性梗阻。"
+  },
+  "image_tac_consistency": "高",
+  "confidence": "高"
+}
+```
+
+【Stage1 校验后结构化证据】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "中期达峰",
+    "pre_diuretic_trend": "已开始自然下降",
+    "post_diuretic_response": "明显持续改善",
+    "late_phase_retention": "低",
+    "overall_pattern": "整体排空协调",
+    "reasoning_focus": "右肾显影及时，约37帧达峰后呈自然下降趋势。利尿后曲线进一步显著下降，末期残留低，符合正常排泄模式。"
+  },
+  "left_kidney": {
+    "early_visualization": "轻度延迟",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "高",
+    "overall_pattern": "介于可改善与持续滞留之间",
+    "reasoning_focus": "左肾显影稍迟，利尿前持续积聚至96帧才达峰。利尿后虽有下降但幅度不足，末期仍存高位放射性，提示混合性梗阻。"
+  },
+  "image_tac_consistency": "高",
+  "confidence": "高"
+}
+
+【Stage2 原始输出】
+{
+  "right_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "显影及时，达峰后自然下降，利尿后排空显著改善且末期残留低，符合生理性排泄模式。"
+  },
+  "left_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "高",
+    "reasoning": "显影延迟且持续积聚，利尿后虽有改善但不充分，末期仍高位滞留，介于功能性与机械性之间。"
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "高"
+}
+
+【Stage2 校验后最终分型】
+{
+  "right_kidney": {
+    "final_label": "正常肾脏",
+    "confidence": "高",
+    "reasoning": "显影及时，达峰后自然下降，利尿后排空显著改善且末期残留低，符合生理性排泄模式。"
+  },
+  "left_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "高",
+    "reasoning": "显影延迟且持续积聚，利尿后虽有改善但不充分，末期仍高位滞留，介于功能性与机械性之间。"
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "高"
+}
+
+【最终回答】
+右肾：正常肾脏；显影及时，达峰后自然下降，利尿后排空显著改善且末期残留低，符合生理性排泄模式。
+左肾：混合性梗阻；显影延迟且持续积聚，利尿后虽有改善但不充分，末期仍高位滞留，介于功能性与机械性之间。
+图像TAC一致性：高
+置信度：高

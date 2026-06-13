@@ -1,0 +1,87 @@
+【Stage1 原始输出】
+```json
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "高",
+    "overall_pattern": "排空延迟且后期改善不充分",
+    "reasoning_focus": "右肾显影及时但持续积聚至晚期，利尿后虽有下降趋势但末期仍呈高位滞留，排空不充分。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "高",
+    "overall_pattern": "排空延迟且后期改善不充分",
+    "reasoning_focus": "左肾显影及时但持续积聚，利尿后可见一定下降但未完全排空，末期仍有明显高位放射性残留。"
+  },
+  "image_tac_consistency": "高",
+  "confidence": "高"
+}
+```
+
+【Stage1 校验后结构化证据】
+{
+  "right_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "高",
+    "overall_pattern": "排空延迟且后期改善不充分",
+    "reasoning_focus": "右肾显影及时但持续积聚至晚期，利尿后虽有下降趋势但末期仍呈高位滞留，排空不充分。"
+  },
+  "left_kidney": {
+    "early_visualization": "及时",
+    "peak_timing": "晚期达峰",
+    "pre_diuretic_trend": "持续上升或进行性积聚",
+    "post_diuretic_response": "有一定改善但不充分",
+    "late_phase_retention": "高",
+    "overall_pattern": "排空延迟且后期改善不充分",
+    "reasoning_focus": "左肾显影及时但持续积聚，利尿后可见一定下降但未完全排空，末期仍有明显高位放射性残留。"
+  },
+  "image_tac_consistency": "高",
+  "confidence": "高"
+}
+
+【Stage2 原始输出】
+{
+  "right_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "高",
+    "reasoning": "显影及时但持续积聚，利尿后虽有改善但不充分且末期高位滞留，提示存在机械性受阻基础伴功能性排泄延迟。"
+  },
+  "left_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "高",
+    "reasoning": "显影及时但持续积聚，利尿后可见下降但未完全排空，末期明显残留，符合机械性梗阻合并功能性排泄障碍特征。"
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "高"
+}
+
+【Stage2 校验后最终分型】
+{
+  "right_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "高",
+    "reasoning": "显影及时但持续积聚，利尿后虽有改善但不充分且末期高位滞留，提示存在机械性受阻基础伴功能性排泄延迟。"
+  },
+  "left_kidney": {
+    "final_label": "混合性梗阻",
+    "confidence": "高",
+    "reasoning": "显影及时但持续积聚，利尿后可见下降但未完全排空，末期明显残留，符合机械性梗阻合并功能性排泄障碍特征。"
+  },
+  "image_tac_consistency": "高",
+  "overall_confidence": "高"
+}
+
+【最终回答】
+右肾：混合性梗阻；显影及时但持续积聚，利尿后虽有改善但不充分且末期高位滞留，提示存在机械性受阻基础伴功能性排泄延迟。
+左肾：混合性梗阻；显影及时但持续积聚，利尿后可见下降但未完全排空，末期明显残留，符合机械性梗阻合并功能性排泄障碍特征。
+图像TAC一致性：高
+置信度：高
