@@ -88,7 +88,7 @@
 
 | 脚本 | 说明 |
 |------|------|
-| `model.py` | UNet 定义 |
+| `model.py` | UNet+LTAE定义 |
 | `train.py` | 训练 |
 | `test.py` | 推理 |
 | `dataset.py` | DataLoader |
@@ -107,7 +107,7 @@
 
 ### tests/fair_compare/ — 公平对比
 
-完整的两阶段 pipeline，用于不同方法间的公平比较实验。含 UNet ROI 预测对比（医生标注 vs 模型预测）。
+完整的两阶段 pipeline，用于不同方法间的公平比较实验。含 UNet+LTAE ROI 预测对比（医生标注 vs 模型预测）。
 
 ## 环境
 
@@ -115,7 +115,7 @@
 pip install openai pillow matplotlib numpy scikit-learn pandas tqdm torch
 
 export DASHSCOPE_API_KEY="your-key"
-export VLM_MODEL="your-VLM model"
+export VLM_MODEL="your-model"
 ```
 
 API 端点：`https://dashscope.aliyuncs.com/compatible-mode/v1`（DashScope OpenAI 兼容模式）。
